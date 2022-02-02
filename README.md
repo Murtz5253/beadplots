@@ -1,2 +1,2 @@
-# beadplots
-Repository for code to generate beadplots.
+# BeadPlots
+Repository for code to generate BeadPlots.
