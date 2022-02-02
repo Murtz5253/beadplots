@@ -1,35 +1,69 @@
 import fitz
+from itertools import chain
+
+def extract_paragraphs(page):
+	"""
+	Takes in a page and returns a list of the paragraphs after polishing them (see above function)
+	in the page.
+	"""
+	all_block_data = page.get_text("blocks")
+	paragraphs = [elem[4] for elem in all_block_data] # Fourth element is where text is actually stored
+	polished_paragraphs = polish_paragraphs(paragraphs)
+	return polished_paragraphs
+
+def polish_paragraphs(paragraphs):
+	"""
+	Combines blocks that aren't actually separate paragraphs
+	but were separated due to the ending of a column or page
+	"""
+	polished_paragraphs, i = [], 0
+	while i < len(paragraphs):
+		curr_block = paragraphs[i]
+
+		# Check second-to-last element b/c last one is always newline character
+		if curr_block[-2] in ['.', '?', '!'] or i == len(paragraphs) - 1: # want to append last paragraph for now regardless
+			polished_paragraphs.append(curr_block)
+			i += 1
+		else:
+			curr_block = curr_block[:-1] # remove the newline from the first block
+			curr_block += paragraphs[i+1]
+			polished_paragraphs.append(curr_block)
+			i += 2 # This might not handle all cases (e.g a paragraph spanning >2 columns) but should handle most for now
+	return polished_paragraphs
+
+def remove_paragraphs(paragraphs):
+	"""
+	This function removes paragraphs that are unrelated to
+	the paper's overall content.
+
+	It calls multiple other functions, and is a work-in-progress.
+	That is to say, as more papers are tested, more possibilities
+	for irrelevant paragraphs will emerge, and a correspondent
+	function will subsequently be added.
+	"""
+	return
+
+def remove_copyright(paragraphs):
+	"""
+	Removes paragraphs that just describe copyright
+	details of the paper.
+	"""
+	return
+
 
 filename = './test_papers/DistributedMentoringCSCW2016.pdf'
 doc = fitz.open(filename)
-page = doc.load_page(0) # Let's start with page 0 as an example
-all_block_data = page.get_text("blocks")
-paragraphs = [elem[4] for elem in all_block_data]
+pages = [doc.load_page(i) for i in range(doc.page_count)]
+# Below is a list of lists; each list consists of one page's paragraphs
+all_paragraphs = [extract_paragraphs(page) for page in pages]
+all_paragraphs = list(chain.from_iterable(all_paragraphs)) # Flatten into one paragraph list
+all_paragraphs = polish_paragraphs(all_paragraphs) # This time, we call to combine single paragraphs separated by page
 
-
-# Code to combine blocks that aren't actually separate paragraphs
-# but were just separated due to the ending of a column.
-polished_paragraphs = []
-i = 0
-while i < len(paragraphs):
-	curr_block = paragraphs[i]
-	# Check second-to-last element b/c last one is always newline character
-	if curr_block[-2] in ['.', '?', '!']:
-		polished_paragraphs.append(curr_block)
-		i += 1
-	else:
-		curr_block = curr_block[:-1] # remove the newline
-		curr_block += paragraphs[i+1]
-		polished_paragraphs.append(curr_block)
-		i += 2 # This might not handle all cases (e.g a paragraph spanning >2 columns) but should handle most for now
-
-for p in polished_paragraphs:
+for p in all_paragraphs:
+	print("PARAGRAPH")
 	print(p)
-
-# for elem in text:
-# 	print(elem[4]) # the list element with the actual words
-# 	print()
-# 	print()
+	print()
+	print()
 
 
 
