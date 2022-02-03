@@ -1,4 +1,5 @@
 import fitz
+import re
 from itertools import chain
 
 def extract_paragraphs(page):
@@ -8,7 +9,8 @@ def extract_paragraphs(page):
 	"""
 	all_block_data = page.get_text("blocks")
 	paragraphs = [elem[4] for elem in all_block_data] # Fourth element is where text is actually stored
-	polished_paragraphs = polish_paragraphs(paragraphs)
+	filtered_paragraphs = filter_paragraphs(paragraphs)
+	polished_paragraphs = polish_paragraphs(filtered_paragraphs)
 	return polished_paragraphs
 
 def polish_paragraphs(paragraphs):
@@ -31,7 +33,7 @@ def polish_paragraphs(paragraphs):
 			i += 2 # This might not handle all cases (e.g a paragraph spanning >2 columns) but should handle most for now
 	return polished_paragraphs
 
-def remove_paragraphs(paragraphs):
+def filter_paragraphs(paragraphs):
 	"""
 	This function removes paragraphs that are unrelated to
 	the paper's overall content.
@@ -41,14 +43,41 @@ def remove_paragraphs(paragraphs):
 	for irrelevant paragraphs will emerge, and a correspondent
 	function will subsequently be added.
 	"""
-	return
+
+	# First function removes copyright detail paragraphs
+	filtered_paragraphs = remove_copyright(paragraphs)
+	return filtered_paragraphs
 
 def remove_copyright(paragraphs):
 	"""
 	Removes paragraphs that just describe copyright
 	details of the paper.
 	"""
-	return
+
+	copyright_removed = []
+
+	# Most copyright paragraphs consist of both these terms/phrases in any order
+	# Avoids removing paragraphs which might mention copyright or permissions briefly but have another purpose
+	# However, this might not be the best approach in a paper in which the research is actually about copyright.
+
+	# search_string1 = r"permission.*to.*copyrights"
+	# search_string2 = r"copyright.*permission.*to" # Admittedly regex is not my strong suit
+	for paragraph in paragraphs:
+	# 	if 'permission to' in paragraph:
+	# 		print("PARAGRAPH")
+	# 		print(repr(paragraph))
+	# 		print()
+	# 		print(re.search(search_string1, paragraph, re.IGNORECASE))
+	# 	check1 = re.search(search_string1, paragraph, re.IGNORECASE)
+	# 	check2 = re.search(search_string2, paragraph, re.IGNORECASE)
+		if 'permission to' in paragraph.lower() and 'copyright' in paragraph.lower(): # TEMP FIX I EVENTUALLY NEED TO FIGURE OUT REGEX
+			print("REMOVED ONE")
+			print(paragraph)
+			continue
+		else:
+			copyright_removed.append(paragraph)
+	return copyright_removed
+
 
 
 filename = './test_papers/DistributedMentoringCSCW2016.pdf'
@@ -59,9 +88,9 @@ all_paragraphs = [extract_paragraphs(page) for page in pages]
 all_paragraphs = list(chain.from_iterable(all_paragraphs)) # Flatten into one paragraph list
 all_paragraphs = polish_paragraphs(all_paragraphs) # This time, we call to combine single paragraphs separated by page
 
-for p in all_paragraphs:
-	print("PARAGRAPH")
-	print(p)
+for i in range(len(all_paragraphs)):
+	print("PARAGRAPH {}".format(i))
+	print(all_paragraphs[i])
 	print()
 	print()
 
