@@ -8,7 +8,18 @@ def extract_paragraphs(page):
 	in the page.
 	"""
 	all_block_data = page.get_text("blocks")
-	paragraphs = [elem[4] for elem in all_block_data] # Fourth element is where text is actually stored
+
+	# Lowercase everything upon extraction for simplicity
+	paragraphs = [elem[4].lower() for elem in all_block_data] # Fourth element is where text is actually stored
+
+	# Ensure we start at the abstract of the paper; email info and such not important; will handle title later
+	# Might even just ask for the title, citations, + year of publication as input to the program later
+	print("HIYA", paragraphs[8])
+	while 'abstract' not in paragraphs[0]:
+		paragraphs.pop(0) # WRONG PLACE FOR THIS BECAUSE THIS GETS CALLED FOR ALL PAGES!
+	# Now we only want the part after the abstract
+	paragraphs[0] = f"abstract \n {paragraphs[0].split('abstract')[1]}"
+
 	filtered_paragraphs = filter_paragraphs(paragraphs)
 	polished_paragraphs = polish_paragraphs(filtered_paragraphs)
 	return polished_paragraphs
@@ -70,13 +81,23 @@ def remove_copyright(paragraphs):
 	# 		print(re.search(search_string1, paragraph, re.IGNORECASE))
 	# 	check1 = re.search(search_string1, paragraph, re.IGNORECASE)
 	# 	check2 = re.search(search_string2, paragraph, re.IGNORECASE)
-		if 'permission to' in paragraph.lower() and 'copyright' in paragraph.lower(): # TEMP FIX I EVENTUALLY NEED TO FIGURE OUT REGEX
+		if 'permission to' in paragraph and 'copyright' in paragraph: # TEMP FIX I EVENTUALLY NEED TO FIGURE OUT REGEX
 			print("REMOVED ONE")
 			print(paragraph)
 			continue
 		else:
 			copyright_removed.append(paragraph)
 	return copyright_removed
+
+def separate_sections(paragraphs):
+	"""
+	This function takes as input a list of POLISHED and FILTERED paragraphs
+	and returns a dictionary where the keys are the section titles (e.g. 
+	Abstract, Introduction, etc.) and the values are lists of paragraphs
+	inside of that section.
+	"""
+	return
+
 
 
 
@@ -89,10 +110,11 @@ all_paragraphs = list(chain.from_iterable(all_paragraphs)) # Flatten into one pa
 all_paragraphs = polish_paragraphs(all_paragraphs) # This time, we call to combine single paragraphs separated by page
 
 for i in range(len(all_paragraphs)):
-	print("PARAGRAPH {}".format(i))
-	print(all_paragraphs[i])
-	print()
-	print()
+	if all_paragraphs[i].split()[0] in ['abstract', 'introduction', 'conclusion'] or i < 5:
+		print("PARAGRAPH {}".format(i))
+		print(all_paragraphs[i])
+		print()
+		print()
 
 
 
