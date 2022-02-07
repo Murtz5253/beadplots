@@ -2,23 +2,22 @@ import fitz
 import re
 from itertools import chain
 
-def extract_paragraphs(page):
+def extract_paragraphs(page, page_no):
 	"""
 	Takes in a page and returns a list of the paragraphs after polishing them (see above function)
 	in the page.
 	"""
 	all_block_data = page.get_text("blocks")
-
 	# Lowercase everything upon extraction for simplicity
 	paragraphs = [elem[4].lower() for elem in all_block_data] # Fourth element is where text is actually stored
 
 	# Ensure we start at the abstract of the paper; email info and such not important; will handle title later
 	# Might even just ask for the title, citations, + year of publication as input to the program later
-	print("HIYA", paragraphs[8])
-	while 'abstract' not in paragraphs[0]:
-		paragraphs.pop(0) # WRONG PLACE FOR THIS BECAUSE THIS GETS CALLED FOR ALL PAGES!
-	# Now we only want the part after the abstract
-	paragraphs[0] = f"abstract \n {paragraphs[0].split('abstract')[1]}"
+	if page_no == 0:
+		while 'abstract' not in paragraphs[0]:
+			paragraphs.pop(0) # WRONG PLACE FOR THIS BECAUSE THIS GETS CALLED FOR ALL PAGES!
+		# Now we only want the part after the abstract
+		paragraphs[0] = f"abstract \n {paragraphs[0].split('abstract')[1]}"
 
 	filtered_paragraphs = filter_paragraphs(paragraphs)
 	polished_paragraphs = polish_paragraphs(filtered_paragraphs)
@@ -105,12 +104,12 @@ filename = './test_papers/DistributedMentoringCSCW2016.pdf'
 doc = fitz.open(filename)
 pages = [doc.load_page(i) for i in range(doc.page_count)]
 # Below is a list of lists; each list consists of one page's paragraphs
-all_paragraphs = [extract_paragraphs(page) for page in pages]
+all_paragraphs = [extract_paragraphs(pages[i], i) for i in range(len(pages))]
 all_paragraphs = list(chain.from_iterable(all_paragraphs)) # Flatten into one paragraph list
 all_paragraphs = polish_paragraphs(all_paragraphs) # This time, we call to combine single paragraphs separated by page
 
 for i in range(len(all_paragraphs)):
-	if all_paragraphs[i].split()[0] in ['abstract', 'introduction', 'conclusion'] or i < 5:
+	if all_paragraphs[i].split()[0] in ['abstract', 'introduction', 'conclusion']:
 		print("PARAGRAPH {}".format(i))
 		print(all_paragraphs[i])
 		print()
