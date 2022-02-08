@@ -1,6 +1,9 @@
 import fitz
 import re
 from itertools import chain
+from docx import *
+from pdf2docx import parse
+
 
 def extract_paragraphs(page, page_no):
 	"""
@@ -103,7 +106,7 @@ def separate_sections(paragraphs):
 	while i < len(paragraphs):
 
 		# See if we need to move to next section
-		curr_paragraph_start = "".join(paragraphs[i][:30]) # 'Tis a string; must get many letters
+		curr_paragraph_start = "".join(paragraphs[i][:20]) # 'Tis a string; must get many letters
 		for header in section_word_bank:
 			if (curr_paragraph_start in header) or (header in curr_paragraph_start):
 				curr_key = header
@@ -131,7 +134,24 @@ all_paragraphs = [extract_paragraphs(pages[i], i) for i in range(len(pages))]
 all_paragraphs = list(chain.from_iterable(all_paragraphs)) # Flatten into one paragraph list
 all_paragraphs = polish_paragraphs(all_paragraphs) # This time, we call to combine single paragraphs separated by page
 
-section_dict = separate_sections(all_paragraphs)
+pdf_file = './test_papers/DistributedMentoringCSCW2016.pdf'
+docx_file = './test_papers/DistributedMentoringCSCW2016.docx'
+parse(pdf_file, docx_file)
+document = Document(docx_file)
+bolds=[]
+italics=[]
+for para in document.paragraphs:
+    for run in para.runs:
+        if run.italic :
+            italics.append(run.text)
+        if run.bold :
+            bolds.append(run.text)
+
+boltalic_Dict={'bold_phrases':bolds,
+              'italic_phrases':italics}
+print(boltalic_Dict)
+
+# section_dict = separate_sections(all_paragraphs)
 # for item in section_dict.items():
 # 	print(item)
 # 	print()
