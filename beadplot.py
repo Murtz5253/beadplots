@@ -95,7 +95,30 @@ def separate_sections(paragraphs):
 	Abstract, Introduction, etc.) and the values are lists of paragraphs
 	inside of that section.
 	"""
-	return
+	section_word_bank = ['abstract', 'introduction', 'related work', 'background', 'previous work and background',
+						'method', 'methods', 'analysis', 'findings', 'discussion', 'limitation',
+						'future directions', 'future work', 'conclusion']
+	result, curr_key = dict(), ""
+	i = 0
+	while i < len(paragraphs):
+
+		# See if we need to move to next section
+		curr_paragraph_start = "".join(paragraphs[i][:30]) # 'Tis a string; must get many letters
+		for header in section_word_bank:
+			if (curr_paragraph_start in header) or (header in curr_paragraph_start):
+				curr_key = header
+				result[curr_key] = list()
+				break # don't want "method" AND "methods," for instance
+
+		# Append paragraph to corresponding value in dictionary
+		print(f"APPENDING THIS PARAGRAPH TO {curr_key}")
+		print(paragraphs[i])
+		print()
+		print()
+		result[curr_key].append(paragraphs[i])
+		i += 1
+	return result
+
 
 
 
@@ -108,12 +131,18 @@ all_paragraphs = [extract_paragraphs(pages[i], i) for i in range(len(pages))]
 all_paragraphs = list(chain.from_iterable(all_paragraphs)) # Flatten into one paragraph list
 all_paragraphs = polish_paragraphs(all_paragraphs) # This time, we call to combine single paragraphs separated by page
 
-for i in range(len(all_paragraphs)):
-	if all_paragraphs[i].split()[0] in ['abstract', 'introduction', 'conclusion']:
-		print("PARAGRAPH {}".format(i))
-		print(all_paragraphs[i])
-		print()
-		print()
+section_dict = separate_sections(all_paragraphs)
+# for item in section_dict.items():
+# 	print(item)
+# 	print()
+# 	print()
+
+# for i in range(len(all_paragraphs)):
+# 	if all_paragraphs[i].split()[0] in ['abstract', 'introduction', 'conclusion'] or i < 10:
+# 		print("PARAGRAPH {}".format(i))
+# 		print(all_paragraphs[i])
+# 		print()
+# 		print()
 
 
 
