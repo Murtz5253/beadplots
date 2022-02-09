@@ -1,11 +1,38 @@
 import fitz
 import re
 from itertools import chain
-from docx import *
-from pdf2docx import parse
 
 
-def extract_paragraphs(page, page_no):
+def detect_bold_flag(page):
+	"""
+	Takes in a page (assumed to be Page 0) and returns the font that
+	the "Abstract" section is flagged with (for PyMuPDF). The purpose
+	of this is to then use that flag to extract all the bold section
+	headings in the paper.
+
+	TWO ASSUMPTIONS:
+		1. The abstract should be on the first page of the paper (can easily
+		fix this later to be inclusive of more papers).
+		2. The section headings are all the same font type and style (this should
+		definitly hold for all standardized research papers). It doesn't matter
+		what this font is; it just matters that it is consistent between the 
+		abstract and the other section headings.
+	"""
+	# Try to print bold?
+	blocks = page.get_text("dict", flags=11)["blocks"]
+	for b in blocks:  # iterate through the text blocks
+		for l in b["lines"]:  # iterate through the text lines
+			for s in l["spans"]:  # iterate through the text spans
+				if s["text"].lower() == 'abstract' or True:
+					# ABSTRACT PRINTS ON A SEPARATE LINE COULD PROBABLY USE THIS TO DETECT DISCUSSION?
+					# CHECK HOW IT APPEARS BY PRINTING ALL PAGES NEXT TIME
+					print(s["text"], '\n', '\n')
+					#return s["flags"]
+	print("NO ABSTRACT FOUND SO EXITING PROGRAM")
+	exit(-1)
+
+
+def extract_paragraphs(page, page_no, section_bolded_words):
 	"""
 	Takes in a page and returns a list of the paragraphs after polishing them (see above function)
 	in the page.
@@ -23,13 +50,37 @@ def extract_paragraphs(page, page_no):
 		paragraphs[0] = f"abstract \n {paragraphs[0].split('abstract')[1]}"
 
 	filtered_paragraphs = filter_paragraphs(paragraphs)
+	#refined_paragraphs = refine_sections(filtered_paragraphs, section_bolded_words)
 	polished_paragraphs = polish_paragraphs(filtered_paragraphs)
 	return polished_paragraphs
+
+# def refine_sections(paragraphs, section_bolded_words):
+# 	"""
+# 	Separates sections that were not detected as separate paragraphs
+# 	by PyMuPDF's block separation for whatever reason.
+# 	"""
+# 	section_word_bank = ['abstract', 'introduction', 'related work', 'background', 'previous work and background',
+# 						'method', 'methods', 'analysis', 'findings', 'discussion', 'limitation',
+# 						'future directions', 'future work', 'conclusion', 'acknowledgments', 'references']
+# 	refined_paragraphs = list()
+# 	for i in range(len(paragraphs)):
+# 		curr = paragraphs[i]
+# 		found_word = False
+# 		for word in section_bolded_words:
+# 			if (word in curr) and (word in section_word_bank) and (curr.find(word) != 0): # if at beginning then was already split
+# 				found_word = True
+# 				print(word)
+# 				para1, para2 = curr.split(word)
+# 				refined_paragraphs.append(para1)
+# 				refined_paragraphs.append(word + para2)
+# 		if not found_word:
+# 			refined_paragraphs.append(curr)
+# 	return refined_paragraphs
 
 def polish_paragraphs(paragraphs):
 	"""
 	Combines blocks that aren't actually separate paragraphs
-	but were separated due to the ending of a column or page
+	but were separated due to the ending of a column or page.
 	"""
 	polished_paragraphs, i = [], 0
 	while i < len(paragraphs):
@@ -100,7 +151,7 @@ def separate_sections(paragraphs):
 	"""
 	section_word_bank = ['abstract', 'introduction', 'related work', 'background', 'previous work and background',
 						'method', 'methods', 'analysis', 'findings', 'discussion', 'limitation',
-						'future directions', 'future work', 'conclusion']
+						'future directions', 'future work', 'conclusion', 'acknowledgments', 'references']
 	result, curr_key = dict(), ""
 	i = 0
 	while i < len(paragraphs):
@@ -129,27 +180,22 @@ def separate_sections(paragraphs):
 filename = './test_papers/DistributedMentoringCSCW2016.pdf'
 doc = fitz.open(filename)
 pages = [doc.load_page(i) for i in range(doc.page_count)]
+
+# Identify potential section headers
+flag = detect_bold_flag(pages[0])
+section_bolded_words = list()
+for page in pages:
+	blocks = page.get_text("dict", flags=11)["blocks"]
+	for b in blocks:  # iterate through the text blocks
+		for l in b["lines"]:  # iterate through the text lines
+			for s in l["spans"]:  # iterate through the text spans
+				if s["flags"] == flag:
+					section_bolded_words.append(s["text"].lower())
+
 # Below is a list of lists; each list consists of one page's paragraphs
-all_paragraphs = [extract_paragraphs(pages[i], i) for i in range(len(pages))]
+all_paragraphs = [extract_paragraphs(pages[i], i, section_bolded_words) for i in range(len(pages))]
 all_paragraphs = list(chain.from_iterable(all_paragraphs)) # Flatten into one paragraph list
 all_paragraphs = polish_paragraphs(all_paragraphs) # This time, we call to combine single paragraphs separated by page
-
-pdf_file = './test_papers/DistributedMentoringCSCW2016.pdf'
-docx_file = './test_papers/DistributedMentoringCSCW2016.docx'
-parse(pdf_file, docx_file)
-document = Document(docx_file)
-bolds=[]
-italics=[]
-for para in document.paragraphs:
-    for run in para.runs:
-        if run.italic :
-            italics.append(run.text)
-        if run.bold :
-            bolds.append(run.text)
-
-boltalic_Dict={'bold_phrases':bolds,
-              'italic_phrases':italics}
-print(boltalic_Dict)
 
 # section_dict = separate_sections(all_paragraphs)
 # for item in section_dict.items():
@@ -158,7 +204,7 @@ print(boltalic_Dict)
 # 	print()
 
 # for i in range(len(all_paragraphs)):
-# 	if all_paragraphs[i].split()[0] in ['abstract', 'introduction', 'conclusion'] or i < 10:
+# 	if all_paragraphs[i].split()[0] in ['abstract', 'introduction', 'conclusion'] or i < 10 or True:
 # 		print("PARAGRAPH {}".format(i))
 # 		print(all_paragraphs[i])
 # 		print()
