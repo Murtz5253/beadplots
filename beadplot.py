@@ -1,5 +1,7 @@
 import fitz
 import re
+import pandas as pd
+import altair as alt
 from itertools import chain
 
 
@@ -26,8 +28,8 @@ def detect_bold_flag(page):
 				if s["text"].lower() == 'abstract' or True:
 					# ABSTRACT PRINTS ON A SEPARATE LINE COULD PROBABLY USE THIS TO DETECT DISCUSSION?
 					# CHECK HOW IT APPEARS BY PRINTING ALL PAGES NEXT TIME
-					print(s["text"], '\n', '\n')
-					#return s["flags"]
+					#print(s["text"], '\n', '\n')
+					return s["flags"]
 	print("NO ABSTRACT FOUND SO EXITING PROGRAM")
 	exit(-1)
 
@@ -86,10 +88,18 @@ def polish_paragraphs(paragraphs):
 	while i < len(paragraphs):
 		curr_block = paragraphs[i]
 
-		# Check second-to-last element b/c last one is always newline character
-		if curr_block[-2] in ['.', '?', '!'] or i == len(paragraphs) - 1: # want to append last paragraph for now regardless
-			polished_paragraphs.append(curr_block)
+		# THIS IS JUST TEMPORARY HARD CODED FOR ONE PAPER
+		if 'mentoring. discussion' in curr_block:
+			para1, para2 = curr_block.split('mentoring. discussion')
+			para1 += 'mentoring.'
+			para2 = 'discussion\n' + para2
+			polished_paragraphs.append(para1)
+			polished_paragraphs.append(para2)
 			i += 1
+		# Check second-to-last element b/c last one is always newline character
+		elif curr_block[-2] in ['.', '?', '!'] or i == len(paragraphs) - 1: # want to append last paragraph for now regardless
+			polished_paragraphs.append(curr_block)
+			i += 1 
 		else:
 			curr_block = curr_block[:-1] # remove the newline from the first block
 			curr_block += paragraphs[i+1]
@@ -197,18 +207,13 @@ all_paragraphs = [extract_paragraphs(pages[i], i, section_bolded_words) for i in
 all_paragraphs = list(chain.from_iterable(all_paragraphs)) # Flatten into one paragraph list
 all_paragraphs = polish_paragraphs(all_paragraphs) # This time, we call to combine single paragraphs separated by page
 
-# section_dict = separate_sections(all_paragraphs)
-# for item in section_dict.items():
-# 	print(item)
-# 	print()
-# 	print()
+section_dict = separate_sections(all_paragraphs)
 
-# for i in range(len(all_paragraphs)):
-# 	if all_paragraphs[i].split()[0] in ['abstract', 'introduction', 'conclusion'] or i < 10 or True:
-# 		print("PARAGRAPH {}".format(i))
-# 		print(all_paragraphs[i])
-# 		print()
-# 		print()
+# NOW A FIRST ATTEMPT AT ACTUALLY MAKING THE BEADPLOT
+
+# This fills in the shorter ones with NaN
+data = pd.DataFrame(dict([ (k,pd.Series(v)) for k,v in section_dict.items() ]))
+data.to_csv('./output/distributed_mentoring.csv')
 
 
 
