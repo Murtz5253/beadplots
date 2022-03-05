@@ -81,6 +81,7 @@ def extract_paragraphs(page, page_no, section_bolded_words):
 # 			refined_paragraphs.append(curr)
 # 	return refined_paragraphs
 
+
 def polish_paragraphs(paragraphs):
 	"""
 	Combines blocks that aren't actually separate paragraphs
@@ -90,11 +91,17 @@ def polish_paragraphs(paragraphs):
 	while i < len(paragraphs):
 		curr_block = paragraphs[i]
 
-		# THIS IS JUST TEMPORARY HARD CODED FOR ONE PAPER
+		# THESE ARE JUST TEMPORARY HARD CODED FOR ONE PAPER
 		if 'miscellaneousintroduction' in curr_block:
-			print("WAHOOOOOOOOOO")
 			para1, para2 = curr_block.split('miscellaneousintroduction')
 			para1 += 'miscellaneous'
+			para2 = 'introduction' + para2
+			polished_paragraphs.append(para1)
+			polished_paragraphs.append(para2)
+			i += 1
+		if 'technology. introduction' in curr_block:
+			para1, para2 = curr_block.split('technology. introduction')
+			para1 += 'technology.'
 			para2 = 'introduction' + para2
 			polished_paragraphs.append(para1)
 			polished_paragraphs.append(para2)
@@ -183,8 +190,9 @@ def separate_sections(paragraphs):
 	inside of that section.
 	"""
 	section_word_bank = ['abstract', 'introduction', 'related work', 'background', 'previous work and background',
-						'method', 'methods', 'methodology', 'findings', 'discussion', 'limitation',
-						'conclusion', 'acknowledgments', 'references']
+						'method', 'experimental setup', 'methods', 'methodology', 'research framework', 'findings', 
+						'results', 'discussion', 'limitation', 'limitations'
+						'reflection', 'conclusion', 'acknowledgments', 'references']
 	result, curr_key = dict(), ""
 	used_headers = list() # prevents incoherency if a section is used again later on
 	i = 0
@@ -206,6 +214,11 @@ def separate_sections(paragraphs):
 		# print()
 		result[curr_key].append(paragraphs[i])
 		i += 1
+	# for key in result:
+	# 	print(key)
+	# 	print(result[key], '\n', '\n')
+	print(result.keys())
+
 	# A little bit of cleanup
 	new_conclusion = list()
 	for element in result['conclusion']:
@@ -224,9 +237,9 @@ def fill_nulls(col):
 	DataFrame with consistent values to be formed, which in turn
 	allows for a proper BeadPlot.
 	"""
-    vals = col[~col.isnull()].values
-    vals = np.resize(vals, len(col)) # this will cause the numbers to just repeat, as desired
-    return vals
+	vals = col[~col.isnull()].values
+	vals = np.resize(vals, len(col)) # this will cause the numbers to just repeat, as desired
+	return vals
 
 def replace_text_and_fill_nulls(col):
 	"""
@@ -236,10 +249,10 @@ def replace_text_and_fill_nulls(col):
 	numbers on the x-axis), whereas the other DataFrame is used to
 	compute values for the approximate keyword search.
 	"""
-    vals = col[~col.isnull()].values
-    vals = [i for i in range(len(vals))] # replace with numbers for ease of processing
-    vals = np.resize(vals, len(col)) # this will cause the numbers to just repeat, as desired
-    return vals
+	vals = col[~col.isnull()].values
+	vals = [i for i in range(len(vals))] # replace with numbers for ease of processing
+	vals = np.resize(vals, len(col)) # this will cause the numbers to just repeat, as desired
+	return vals
 
 def main(argv):
 	# first command-line arg is the filepath to read the PDF
@@ -247,10 +260,29 @@ def main(argv):
 	doc = fitz.open(filename)
 	pages = [doc.load_page(i) for i in range(doc.page_count)]
 
+	# Identify potential section headers
+	flag = detect_bold_flag(pages[0])
+	section_bolded_words = list()
+	for page in pages:
+		blocks = page.get_text("dict", flags=11)["blocks"]
+		for b in blocks:  # iterate through the text blocks
+			for l in b["lines"]:  # iterate through the text lines
+				for s in l["spans"]:  # iterate through the text spans
+					if s["flags"] == flag:
+						section_bolded_words.append(s["text"].lower())
+
 	# Below is a list of lists; each list consists of one page's paragraphs
 	all_paragraphs = [extract_paragraphs(pages[i], i, section_bolded_words) for i in range(len(pages))]
 	all_paragraphs = list(chain.from_iterable(all_paragraphs)) # Flatten into one paragraph list
 	all_paragraphs = polish_paragraphs(all_paragraphs) # This time, we call to combine single paragraphs separated by page
+
+	i = 1
+	for p in all_paragraphs:
+		print("PARAGRAPH " + str(i), '\n')
+		print(p)
+		print()
+		print()
+		i+=1
 
 	# Get all section's paragraphs in a dictionary
 	section_dict = separate_sections(all_paragraphs)
@@ -262,8 +294,12 @@ def main(argv):
 	data = data.apply(fill_nulls, axis=0) # Repeat values to remove nulls so beadplot can be formed
 	long_form_data = data.melt(var_name='Section', value_name='Paragraph')
 	long_form_data_replaced = data_replaced.melt(var_name='Section', value_name='Paragraph')
-	list_keywords = list(aks.get_synonyms(argv[2])) # ask user for words related to second command-line arg
-	algo_func = lambda paragraph : aks.count_all_matches(list_keywords, paragraph, edit_distance=1)
+	if " " in argv[2]: # checking if a phrase
+		list_keywords = list(aks.get_keyphrase_synonyms(argv[2])) # ask user for phrases related to second command-line arg
+	else:
+		list_keywords = list(aks.get_keyword_synonyms(argv[2])) # ask user for words related to second command-line arg
+	edit_distance = list_keywords[0].count(' ') # one more edit than the number of spaces allowed, so scales with phrase
+	algo_func = lambda paragraph : aks.count_all_matches(list_keywords, paragraph, edit_distance=edit_distance)
 	long_form_data['algo_score_raw'] = long_form_data['Paragraph'].apply(algo_func)
 
 	# min-max normalize the column data
@@ -271,26 +307,17 @@ def main(argv):
 	# 										/(long_form_data['algo_score_raw'].max()-long_form_data['algo_score_raw'].min())\
 	# 										+ 0.2 # so all marks show up
 
-
 	# Now that all the stuff is computed, can replace actual text with paragraph numbers
 	long_form_data['Paragraph'] = long_form_data_replaced['Paragraph']
 	# third command-line arg is the output path to CSV
-	long_form_data.to_csv(argv[3])
+	output_file = f"{argv[3][:-4]}-{'-'.join(list_keywords)}.csv"
+	long_form_data.to_csv(output_file)
 
 
 if __name__ == '__main__':
 	main(sys.argv)
 
-# # Identify potential section headers
-# flag = detect_bold_flag(pages[0])
-# section_bolded_words = list()
-# for page in pages:
-# 	blocks = page.get_text("dict", flags=11)["blocks"]
-# 	for b in blocks:  # iterate through the text blocks
-# 		for l in b["lines"]:  # iterate through the text lines
-# 			for s in l["spans"]:  # iterate through the text spans
-# 				if s["flags"] == flag:
-# 					section_bolded_words.append(s["text"].lower())
+
 
 
 

@@ -1,0 +1,13 @@
+7 SUMMARY OF FINDINGS AND CONTRIBUTION The main contribution of our paper is an initial guideline for autonomous driving experience design, bringing together the areas of UX, XAI and autonomous driving. These findings (F1-F5) may help other researchers to design for positive UX in autonomous driving (see annotated Figure 6).
+
+F1) Our study shows that possible negative effects of AD on the UX can be prevented by providing passengers of an AV with live explanations.
+
+F2) Retrospective explanations of the AV’s reaction to situations that happened during the ride, e.g. presented via a mobile app, show the same positive influence on the UX. However, they do not prevent any negative experiences during the ride. Furthermore, retrospective feedback does not show any additional positive effect on the UX if live explanations were provided.
+
+F3) Using live explanations and retrospective feedback, e.g. via a mobile application, positively influence the perceived feeling of control. Retrospective feedback shows a positive effect on the perceived feeling of control, even if live explanations were provided.
+
+F4) Providing live explanations during the ride increase the understanding and ease of use of the AV.
+
+F5) Retrospective explanations show the same efect if live explanations were not provided.
+
+In addition, we found a correlation between the perceived feeling of control and the UX. However, at this point, we cannot find the exact reason. Do users have a better UX when they feel in control as they are able to understand the system better (even though when in fact they do not have any control)? In particular, more specific questionnaire items for this factor could lead to more insights. This will be further explored in a future mixed-method study.
