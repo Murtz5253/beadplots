@@ -60,7 +60,6 @@ def get_keyword_synonyms(keyword):
 	print("The following words have been identified as additional\
 			related/relevant keywords as per your query.")
 	print(synonyms, end="\n\n")
-	time.sleep(3)
 	print("One by one, please enter the words you would like to be included\
 			in the match score for the generation of your BeadPlot. When you\
 			have finished your selection, please enter the * key.")

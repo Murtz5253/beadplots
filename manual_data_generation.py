@@ -79,7 +79,7 @@ def generate_beadplot(data_csv, title, num_citations):
     base = alt.Chart(data, title=f"{title}, {num_citations} Citations").mark_circle(opacity=1, stroke='#4c78a8').encode(
         x=alt.X('Paragraph:N', axis=alt.Axis(labelAngle=0)),
         y=alt.Y('Section:N', sort=list(OrderedDict.fromkeys(data['Section']))),
-        size=alt.Size('algo_score_raw:Q', title="Probability of Match", legend=alt.Legend(tickCount=tick_count)), # ordinal variable type so legend not continuous
+        size=alt.Size('algo_score_raw:Q', title="Number of Matches", legend=alt.Legend(tickCount=tick_count - 1)), # ordinal variable type so legend not continuous
     ).properties(
         width=1200,
         height=500
