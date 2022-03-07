@@ -1,0 +1,465 @@
+,Section,Paragraph,algo_score_raw
+0,abstract,0,0
+1,abstract,1,0
+2,abstract,0,0
+3,abstract,1,0
+4,abstract,0,0
+5,abstract,1,0
+6,abstract,0,0
+7,abstract,1,0
+8,abstract,0,0
+9,abstract,1,0
+10,abstract,0,0
+11,abstract,1,0
+12,abstract,0,0
+13,abstract,1,0
+14,abstract,0,0
+15,abstract,1,0
+16,abstract,0,0
+17,abstract,1,0
+18,abstract,0,0
+19,abstract,1,0
+20,abstract,0,0
+21,abstract,1,0
+22,abstract,0,0
+23,abstract,1,0
+24,abstract,0,0
+25,abstract,1,0
+26,abstract,0,0
+27,abstract,1,0
+28,abstract,0,0
+29,abstract,1,0
+30,abstract,0,0
+31,abstract,1,0
+32,abstract,0,0
+33,abstract,1,0
+34,abstract,0,0
+35,abstract,1,0
+36,abstract,0,0
+37,abstract,1,0
+38,abstract,0,0
+39,abstract,1,0
+40,abstract,0,0
+41,abstract,1,0
+42,abstract,0,0
+43,abstract,1,0
+44,abstract,0,0
+45,abstract,1,0
+46,abstract,0,0
+47,abstract,1,0
+48,abstract,0,0
+49,abstract,1,0
+50,abstract,0,0
+51,abstract,1,0
+52,abstract,0,0
+53,abstract,1,0
+54,abstract,0,0
+55,abstract,1,0
+56,abstract,0,0
+57,abstract,1,0
+58,introduction,0,0
+59,introduction,1,0
+60,introduction,2,0
+61,introduction,3,0
+62,introduction,4,0
+63,introduction,5,0
+64,introduction,6,0
+65,introduction,7,0
+66,introduction,0,0
+67,introduction,1,0
+68,introduction,2,0
+69,introduction,3,0
+70,introduction,4,0
+71,introduction,5,0
+72,introduction,6,0
+73,introduction,7,0
+74,introduction,0,0
+75,introduction,1,0
+76,introduction,2,0
+77,introduction,3,0
+78,introduction,4,0
+79,introduction,5,0
+80,introduction,6,0
+81,introduction,7,0
+82,introduction,0,0
+83,introduction,1,0
+84,introduction,2,0
+85,introduction,3,0
+86,introduction,4,0
+87,introduction,5,0
+88,introduction,6,0
+89,introduction,7,0
+90,introduction,0,0
+91,introduction,1,0
+92,introduction,2,0
+93,introduction,3,0
+94,introduction,4,0
+95,introduction,5,0
+96,introduction,6,0
+97,introduction,7,0
+98,introduction,0,0
+99,introduction,1,0
+100,introduction,2,0
+101,introduction,3,0
+102,introduction,4,0
+103,introduction,5,0
+104,introduction,6,0
+105,introduction,7,0
+106,introduction,0,0
+107,introduction,1,0
+108,introduction,2,0
+109,introduction,3,0
+110,introduction,4,0
+111,introduction,5,0
+112,introduction,6,0
+113,introduction,7,0
+114,introduction,0,0
+115,introduction,1,0
+116,related work,0,0
+117,related work,1,0
+118,related work,2,0
+119,related work,3,0
+120,related work,0,0
+121,related work,1,0
+122,related work,2,0
+123,related work,3,0
+124,related work,0,0
+125,related work,1,0
+126,related work,2,0
+127,related work,3,0
+128,related work,0,0
+129,related work,1,0
+130,related work,2,0
+131,related work,3,0
+132,related work,0,0
+133,related work,1,0
+134,related work,2,0
+135,related work,3,0
+136,related work,0,0
+137,related work,1,0
+138,related work,2,0
+139,related work,3,0
+140,related work,0,0
+141,related work,1,0
+142,related work,2,0
+143,related work,3,0
+144,related work,0,0
+145,related work,1,0
+146,related work,2,0
+147,related work,3,0
+148,related work,0,0
+149,related work,1,0
+150,related work,2,0
+151,related work,3,0
+152,related work,0,0
+153,related work,1,0
+154,related work,2,0
+155,related work,3,0
+156,related work,0,0
+157,related work,1,0
+158,related work,2,0
+159,related work,3,0
+160,related work,0,0
+161,related work,1,0
+162,related work,2,0
+163,related work,3,0
+164,related work,0,0
+165,related work,1,0
+166,related work,2,0
+167,related work,3,0
+168,related work,0,0
+169,related work,1,0
+170,related work,2,0
+171,related work,3,0
+172,related work,0,0
+173,related work,1,0
+174,background,0,0
+175,background,1,0
+176,background,2,0
+177,background,3,0
+178,background,4,0
+179,background,5,0
+180,background,6,0
+181,background,0,0
+182,background,1,0
+183,background,2,0
+184,background,3,0
+185,background,4,0
+186,background,5,0
+187,background,6,0
+188,background,0,0
+189,background,1,0
+190,background,2,0
+191,background,3,0
+192,background,4,0
+193,background,5,0
+194,background,6,0
+195,background,0,0
+196,background,1,0
+197,background,2,0
+198,background,3,0
+199,background,4,0
+200,background,5,0
+201,background,6,0
+202,background,0,0
+203,background,1,0
+204,background,2,0
+205,background,3,0
+206,background,4,0
+207,background,5,0
+208,background,6,0
+209,background,0,0
+210,background,1,0
+211,background,2,0
+212,background,3,0
+213,background,4,0
+214,background,5,0
+215,background,6,0
+216,background,0,0
+217,background,1,0
+218,background,2,0
+219,background,3,0
+220,background,4,0
+221,background,5,0
+222,background,6,0
+223,background,0,0
+224,background,1,0
+225,background,2,0
+226,background,3,0
+227,background,4,0
+228,background,5,0
+229,background,6,0
+230,background,0,0
+231,background,1,0
+232,method,0,0
+233,method,1,0
+234,method,2,0
+235,method,3,0
+236,method,4,0
+237,method,5,0
+238,method,6,0
+239,method,0,0
+240,method,1,0
+241,method,2,0
+242,method,3,0
+243,method,4,0
+244,method,5,0
+245,method,6,0
+246,method,0,0
+247,method,1,0
+248,method,2,0
+249,method,3,0
+250,method,4,0
+251,method,5,0
+252,method,6,0
+253,method,0,0
+254,method,1,0
+255,method,2,0
+256,method,3,0
+257,method,4,0
+258,method,5,0
+259,method,6,0
+260,method,0,0
+261,method,1,0
+262,method,2,0
+263,method,3,0
+264,method,4,0
+265,method,5,0
+266,method,6,0
+267,method,0,0
+268,method,1,0
+269,method,2,0
+270,method,3,0
+271,method,4,0
+272,method,5,0
+273,method,6,0
+274,method,0,0
+275,method,1,0
+276,method,2,0
+277,method,3,0
+278,method,4,0
+279,method,5,0
+280,method,6,0
+281,method,0,0
+282,method,1,0
+283,method,2,0
+284,method,3,0
+285,method,4,0
+286,method,5,0
+287,method,6,0
+288,method,0,0
+289,method,1,0
+290,findings,0,0
+291,findings,1,0
+292,findings,2,0
+293,findings,3,0
+294,findings,4,0
+295,findings,5,0
+296,findings,6,0
+297,findings,7,0
+298,findings,8,0
+299,findings,9,0
+300,findings,10,0
+301,findings,11,0
+302,findings,12,0
+303,findings,13,0
+304,findings,14,0
+305,findings,15,0
+306,findings,16,0
+307,findings,17,0
+308,findings,18,0
+309,findings,19,0
+310,findings,20,0
+311,findings,21,0
+312,findings,22,0
+313,findings,23,0
+314,findings,24,0
+315,findings,25,0
+316,findings,26,0
+317,findings,27,0
+318,findings,28,0
+319,findings,29,0
+320,findings,30,0
+321,findings,31,0
+322,findings,32,0
+323,findings,33,0
+324,findings,34,0
+325,findings,35,0
+326,findings,36,0
+327,findings,37,0
+328,findings,38,0
+329,findings,39,0
+330,findings,40,0
+331,findings,41,0
+332,findings,42,0
+333,findings,43,0
+334,findings,44,0
+335,findings,45,0
+336,findings,46,0
+337,findings,47,0
+338,findings,48,0
+339,findings,49,0
+340,findings,50,0
+341,findings,51,0
+342,findings,52,0
+343,findings,53,0
+344,findings,54,0
+345,findings,55,0
+346,findings,56,0
+347,findings,57,0
+348,discussion,0,0
+349,discussion,1,0
+350,discussion,2,0
+351,discussion,3,0
+352,discussion,4,0
+353,discussion,5,0
+354,discussion,6,0
+355,discussion,7,0
+356,discussion,8,0
+357,discussion,9,0
+358,discussion,0,0
+359,discussion,1,0
+360,discussion,2,0
+361,discussion,3,0
+362,discussion,4,0
+363,discussion,5,0
+364,discussion,6,0
+365,discussion,7,0
+366,discussion,8,0
+367,discussion,9,0
+368,discussion,0,0
+369,discussion,1,0
+370,discussion,2,0
+371,discussion,3,0
+372,discussion,4,0
+373,discussion,5,0
+374,discussion,6,0
+375,discussion,7,0
+376,discussion,8,0
+377,discussion,9,0
+378,discussion,0,0
+379,discussion,1,0
+380,discussion,2,0
+381,discussion,3,0
+382,discussion,4,0
+383,discussion,5,0
+384,discussion,6,0
+385,discussion,7,0
+386,discussion,8,0
+387,discussion,9,0
+388,discussion,0,0
+389,discussion,1,0
+390,discussion,2,0
+391,discussion,3,0
+392,discussion,4,0
+393,discussion,5,0
+394,discussion,6,0
+395,discussion,7,0
+396,discussion,8,0
+397,discussion,9,0
+398,discussion,0,0
+399,discussion,1,0
+400,discussion,2,0
+401,discussion,3,0
+402,discussion,4,0
+403,discussion,5,0
+404,discussion,6,0
+405,discussion,7,0
+406,conclusion,0,0
+407,conclusion,1,0
+408,conclusion,0,0
+409,conclusion,1,0
+410,conclusion,0,0
+411,conclusion,1,0
+412,conclusion,0,0
+413,conclusion,1,0
+414,conclusion,0,0
+415,conclusion,1,0
+416,conclusion,0,0
+417,conclusion,1,0
+418,conclusion,0,0
+419,conclusion,1,0
+420,conclusion,0,0
+421,conclusion,1,0
+422,conclusion,0,0
+423,conclusion,1,0
+424,conclusion,0,0
+425,conclusion,1,0
+426,conclusion,0,0
+427,conclusion,1,0
+428,conclusion,0,0
+429,conclusion,1,0
+430,conclusion,0,0
+431,conclusion,1,0
+432,conclusion,0,0
+433,conclusion,1,0
+434,conclusion,0,0
+435,conclusion,1,0
+436,conclusion,0,0
+437,conclusion,1,0
+438,conclusion,0,0
+439,conclusion,1,0
+440,conclusion,0,0
+441,conclusion,1,0
+442,conclusion,0,0
+443,conclusion,1,0
+444,conclusion,0,0
+445,conclusion,1,0
+446,conclusion,0,0
+447,conclusion,1,0
+448,conclusion,0,0
+449,conclusion,1,0
+450,conclusion,0,0
+451,conclusion,1,0
+452,conclusion,0,0
+453,conclusion,1,0
+454,conclusion,0,0
+455,conclusion,1,0
+456,conclusion,0,0
+457,conclusion,1,0
+458,conclusion,0,0
+459,conclusion,1,0
+460,conclusion,0,0
+461,conclusion,1,0
+462,conclusion,0,0
+463,conclusion,1,0

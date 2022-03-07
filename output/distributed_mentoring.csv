@@ -1,0 +1,1500 @@
+,abstract,introduction,previous work and background,method,findings,discussion,limitation,conclusion,acknowledgments,references
+0,"abstract 
+ 
+young people worldwide are participating in ever-increasing 
+numbers in online fan communities. far from mere shallow 
+repositories of pop culture, these sites are accumulating 
+significant evidence that sophisticated informal learning is 
+taking place online in novel and unexpected ways. in order 
+to understand and analyze in more detail how learning might 
+be occurring, we conducted an in-depth nine-month 
+ethnographic investigation of online fanfiction communities, 
+including participant observation and fanfiction author 
+interviews. our observations led to the development of a 
+theory we term distributed mentoring, which we present in 
+detail in this paper. distributed mentoring exemplifies one 
+instance of how networked technology affords new 
+extensions of behaviors that were previously bounded by 
+time and space. distributed mentoring holds potential for 
+application beyond the spontaneous mentoring observed in 
+this investigation and may help students receive diverse, 
+thoughtful feedback in formal learning environments as well.
+","introduction
+in a 45-minute period during the afternoon on monday, may 
+4, 2015, 100 new fanfiction stories were published on the 
+online repository fanfiction.net. fanfiction is immensely 
+popular among adolescents and young adults, and this popularity is evident in the millions of stories housed in 
+online fanfiction repositories. fanfiction.net is the 440th 
+most popular website in the united states, and its visitors are 
+overwhelmingly teens and emerging adults [1]. fanfiction
+authors have written stories housed on fanfiction.net that are 
+several hundred thousand words in length, even longer than 
+the original works on which the stories were based. this abundance of literary production stands in sharp 
+contrast to popular wisdom that today’s young people are not 
+interested in or even capable of long-form writing and use 
+technology primarily for shallow interactions on social 
+media [11,23,59,62]. what is it about fanfiction experiences 
+that foster such engaged participation among youth? we set 
+out to investigate why members of a generation often 
+maligned for placing video games ahead of books are so 
+engaged in this form of writing. during this analysis, we 
+communicated directly with young fanfiction authors in 
+addition to observing interactions between authors and 
+readers over the course of nine months. in the process, we 
+discovered evidence of a type of community-based learning 
+and mentoring that is uniquely facilitated by the 
+technological affordances of the web. moving beyond 
+formal mentoring, people have developed a network-enabled 
+form of giving and receiving feedback, actively correlating 
+knowledge gleaned in small pieces from a large community 
+to inform their fanfiction writing. as this knowledge is 
+embodied in artifacts of interaction between community 
+members, we draw on and extend hutchins’ framework of 
+distributed cognition [30,31] and dawson’s mentoring 
+framework [18]
+in naming this process distributed 
+mentoring.
+","previous work and background
+fanfiction
+scholars have explored fanfiction from a number of angles, 
+including legality [47,55,57], literacy [8,35], instructional 
+potential [12,44], sexuality [34,58], and identity [3,8]. jenkins’
+[34] seminal investigation of fanfiction occurred more than 20 
+years ago as part of a larger study of fan culture. challenging 
+negative stereotypes of fans, jenkins depicted them “as active 
+producers and manipulators of meanings” [34]. he identified 
+fanfiction as a prime example of how fans engage actively with 
+original creative works by referencing, manipulating, and 
+extending them in new and unexpected ways. fanfiction has existed since the 1960s, developing within the 
+fandoms for television shows like star trek [34]. however,
+the distribution of fanfiction has substantially changed with 
+the advent of internet-based fanfiction repositories. removing 
+the physical constraints of printing has lowered the barriers
+to reader critique, with the result that there may be hundreds 
+or thousands of reviews submitted for a single fanfiction
+story. additionally, the public, persistent, and immediate 
+nature of online reviews allows for instant and highly 
+interactive communication among reviewers as well as the 
+fanfiction authors themselves. this dramatic decrease in the 
+cost of providing feedback to authors has led to far greater 
+volumes of information being exchanged among larger 
+numbers of participants in online fanfiction communities, 
+enabling a complex web of support, commentary, 
+communication, and mentoring that could not have been 
+possible with older technologies: what we term distributed 
+mentoring.
+","methods
+drawing on a rich set of data sources, we describe the 
+learning and mentoring that take place in fanfiction
+communities from the perspective of the authors, and present 
+the results of our analyses of fanfiction user groups and story 
+reviews. we define learning as a process of deepening 
+participation in a social practice, and mentoring as positive 
+support for this process [33,36,42]. we detail the theory of 
+distributed mentoring that grew out of our ethnographic 
+investigation of fanfiction communities and suggest its 
+potential impact for computer-mediated learning.
+","findings
+the fanfiction authors we interviewed
+believed that 
+participating in fanfiction communities was both a source of 
+emotional support and an avenue to improve the quality of 
+their writing. they attributed these benefits to the varied 
+forms of informal mentoring they received in the 
+communities to which they belonged. our participant 
+observations led us to identify seven distinct attributes 
+associated with the mentoring processes that participants 
+described.
+","discussion
+
+we set out to understand what adolescents and young adults 
+were learning from their participation in online fanfiction
+communities, how this learning took place, and what part 
+mentoring played. we initially anticipated that we would 
+uncover traditional mentoring relationships where less 
+experienced writers learned from more experienced writers; 
+instead, during our investigation, we encountered a rich and 
+interwoven tapestry of interactive, cumulatively sophisticated 
+advice and informal instruction that added up to a networked 
+experience we have termed distributed mentoring.
+","limitations and future directions
+as is inherent in most qualitative research, our site for this 
+study was limited. we investigated only three fandoms and 
+two fanfiction repositories in detail; therefore, our findings 
+may not generalize to mentoring in online affinity groups at 
+large. there may be unique aspects specific to these two 
+fanfiction communities that encourage members to leave 
+more feedback. the communities we observed were very 
+civil, as shown by the low amount of trolling present in story 
+reviews. this civility was surprising because readers can 
+leave anonymous reviews on fanfiction.net, and anonymous 
+forms of online communication have a reputation for being 
+susceptible to trolling [46]. this civility could in part be a 
+legacy of the benign atmosphere found in early fanfiction
+zines’ letters of comment; it may be that other affinity 
+spaces that lack this legacy may not be supportive enough to 
+sustain distributed mentoring [34].
+","conclusion
+online fanfiction communities represent affinity spaces in 
+which authors, brought together by a passion for the fandom, 
+provide support for each other in their creative endeavors. 
+through in-depth interviews and participant observations, 
+we identified and documented a unique style of mentoring 
+occurring in these communities that we named distributed 
+mentoring, inspired by hutchins’ [30] theory of distributed 
+cognition. in our investigation, we observed and described 
+seven key attributes of distributed mentoring that distinguish 
+it from traditional, offline forms of mentoring and tie it to the 
+particular affordances of networked publics: aggregation, 
+accretion, 
+acceleration, 
+abundance, 
+availability, 
+asynchronicity, and affect. distributed mentoring involves 
+numerous 
+participants 
+answering 
+questions, 
+leaving 
+feedback, and engaging each other in asynchronous 
+conversations that in the aggregate yield a positive mentoring 
+experience. the authors we interviewed valued the feedback 
+they received from the community and viewed it as an 
+important part of their growth as writers. aside from its role 
+in online communities, distributed mentoring may also 
+present opportunities, as described in the implications 
+section, for collaborative learning in other learning contexts, 
+including formal educational contexts.
+","acknowledgments
+we thank the reviewers who provided thoughtful and 
+detailed comments on previous iterations of this document. 
+the final paper has been greatly improved by their feedback. 
+we also extend gratitude to our participants in this study and 
+our colleague, jeff giorgi.
+","references
+1.
+alexa. 2015. site overview – fanfiction.net. retrieved 
+may 4, 2015 from 
+http://www.alexa.com/siteinfo/fanfiction.net
+2.
+alexa. 2015. site overview – fimfiction.net. retrieved 
+may 4, 2015 from 
+http://www.alexa.com/siteinfo/fimfiction.net3.
+���� ��������������������� ��������������������������-
+creations of the female harry potter protagonist in fan 
+fiction. z anglist am 61, 2: 155–173.
+4.
+cecilia r. aragon and alison williams. 2011. 
+collaborative creativity: a complex systems model 
+with distributed affect. in proceedings of the sigchi 
+conference on human factors in computing systems
+(chi ’11), acm, 1875–1884. 
+5.
+cecilia r aragon, sarah poon, andres monroy-
+hernandez, and diana aragon. 2009. a tale of two 
+online communities: fostering collaboration and 
+creativity in scientists and children. creativity & 
+children (c&c ’09), acm, 9–18.
+6.
+rebecca w. black. 2006. language, culture, and 
+identity in online fanfiction. e-learning 3, 2: 15.
+7.
+rebecca black. 2007. digital design: english language 
+learners and reader reviews in online fiction. in a new 
+literacies sampler, michele knobel and colin 
+lankshear (eds.). peter lang, new york, ny, 115-136.
+8.
+rebecca w black. 2008. adolescents and online 
+fanfiction. peter lang, new york, ny.
+9.
+tom boellstorff, bonnie nardi, celia pearce, and t.l. 
+taylor. 2012. ethnography and virtual worlds: a
+handbook of method�����������������������������������
+press, princeton.
+10. danah boyd. 2007. the role of networked publics in 
+teenage social life. in youth, identity, and digital 
+media. mit press, cambridge, ma, 119–142.
+11. tom bradshaw. 2004. reading at �������� survey of 
+literary reading in america���������������������
+national endowment for the arts, washington, d.c.
+12. kelly chandler-olcott and donna mahar. 2003. 
+adolescents’ anime-inspired “fanfictions”: an
+exploration of multiliteracies. j of adoles & adult lit
+46, 7: 556–566.
+13. kathy charmaz. 2006. constructing grounded theory: 
+a practical guide through qualitative analysis. sage, 
+london.
+14. michelle chatelain. 2012. harry potter and the prisoner 
+of copyright law: fan fiction, derivative works, and the 
+fair use doctrine. tulane j of tech & intellect pro 15: 
+199–319.
+15. mark chen. 2012. leet noobs: the life and death of 
+an expert player group in world of warcraft. new 
+����������������������������
+16. computing research association. 2005. cra-w
+canadian distributed mentor project. retrieved july 
+27, 2015 from 
+http://archive2.cra.org/activities/craw_archive/cdmp/in
+dex.php
+17. katie davis. 2010. coming of age online: the 
+developmental underpinnings of girls’ blogs. j of 
+adolesc res 25, 1: 145–171. 
+18. phillip dawson. 2014. beyond a definition: toward a 
+framework for designing and specifying mentoring 
+models. ed res 43, 3: 137–145. 19. pierre dillenbourg. 2005. designing biases that 
+augment socio-cognitive interactions. in barriers and 
+biases in computer-mediated knowledge 
+communication: and how they may be overcome, 
+rainer bromme, friedrich w hesse and hans spada 
+(eds.). kluwer academic publisher, dordrecht, 
+netherlands, 243–264.
+20. elizabeth dutro and monette c. mciver. 2011. 
+imagining a writer’s life: extending the connection 
+between readers and books. in handbook of research 
+on children’s and young adult literature, shelby 
+anne wolf, karen coats, patricia enciso and christine
+a. jenkins (eds.). routledge, new york, 92–107.
+21. ellen a ensher, christian heun, and anita blanchard. 
+2003. online mentoring and computer-mediated 
+communication: new directions in research. j of voc 
+behav 63, 2: 264–288.
+22. fimfiction.net. 2015. fimfiction.net statistics. 
+retrieved july 19, 2015 from 
+http://www.fimfiction.net/statistics
+23. howard gardner and katie davis. 2013. the app 
+generation: how today’s youth navigate identity, 
+intimacy, and imagination in a digital world. yale 
+university press, new haven
+24. james paul gee. 2004. situated language and 
+learning: a critique of traditional schooling. new 
+���������������������������
+25. james paul gee. 2013. the anti-education era: 
+creating smarter students through digital learning.
+�����������������������������������
+26. darlene rose hampton. 2015. bound princes and 
+monogamy warnings: harry potter, slash, and queer 
+performance in livejournal communities. transform 
+works & cult 18.
+27. ashley hinck. 2012. theorizing a public engagement 
+keystone: seeing fandom’s integral connection to civic 
+engagement through the case of the harry potter 
+alliance. transform works & cult 10.
+28. james hollan, edwin hutchins, and david kirsh. 2000. 
+distributed cognition: toward a new foundation for 
+human-computer interaction research. acm tochi 7, 
+2: 174–196. http://doi.org/10.1145/353485.353487
+29. sylvia hurtado, mark engberg, luis ponjuan, and lisa 
+landreman. 2002. students’ precollege preparation for 
+participation in a diverse democracy. res in higher ed
+43, 2: 163–186. 
+30. edwin hutchins. 1995. cognition in the wild. mit 
+press, cambridge, mass.
+31. edwin hutchins and tove klausen. 1996. distributed 
+cognition in an airline cockpit. in cognition and 
+communication at work���������������� ������������
+middleton (eds.). cambridge university press, 15–34.
+32. ����������� ��������hanging out, messing around, and 
+geeking out: kids living and learning with new 
+media. mit press, cambridge, mass.
+33. ������������kris gutiérrez, sonia livingstone, bill 
+penuel, jean rhodes, katie salen, juliet schor, julian sefton-green, and s. craig watkins. 2012. connected 
+learning: an agenda for research and design. digital 
+media and learning research hub.
+34. henry jenkins. 1992. textual poachers: television 
+fans & participatory culture. routledge, new york.
+35. henry jenkins. 2006. convergence culture: where old 
+and new media collide. new york university press, 
+ny.
+36. henry jenkins. 2009. confronting the challenges of 
+participatory culture: media education for the 21st 
+century. the mit press, cambridge, ma.
+37. henry jenkins. 2012. “cultural acupuncture”: fan 
+activism and the harry potter alliance. transform 
+works & cult 10.
+38. henry jenkins and kurt squire. 2011. video games 
+and learning: teaching and participatory culture in 
+the digital age�������������������������������������
+ny.
+39. jessica elizabeth johnston. 2015. doctor who–themed 
+weddings and the performance of fandom. transform 
+works & cult 18.
+40. debi khasnabis, catherine h. reischl, melissa stull, 
+and timothy boerst. 2013. distributed mentoring: 
+designing contexts for collective support of teacher 
+learning. eng j 102, 3: 71–77.
+41. colin lankshear and michele knobel. 2007. 
+researching new literacies: web 2.0 practices and 
+insider perspectives. e-learning 4, 3: 224–240. 
+42. jean lave and etienne wenger. 1991. situated 
+learning: legitimate peripheral participation. 
+cambridge university press, cambridge.
+43. margaret mackey and jill kedersha mcclay. 2008. 
+pirates and poachers: fan fiction and the conventions 
+of reading and writing. eng in ed 42, 2: 131–147.
+44. kerri mathew and devon adams. 2009. i love your 
+book, but i love my version more: fanfiction in the 
+english language arts classroom. alan review 36, 3: 
+35-41.
+45. sharan b. merriam. 2014. qualitative research: a
+guide to design and implementation. wiley, hoboken.
+46. michael j. moore, tadashi nakano, akihiro enomoto, 
+and tatsuya suda. 2012. anonymity and roles 
+associated with aggressive posts in an online forum. 
+comp in hum behav 28, 3: 861–867.
+47. mollie e. nolan. 2006. search for original expression: 
+fan fiction and the fair use defense. siu law j 30, 3: 
+533-571.
+48. nick pidgeon and karen henwood. 1996. grounded
+theory: practical implementation. in handbook of
+qualitative research and methods for psychology and 
+the social sciences, j. t. e. richardson (ed.). wiley, 
+oxford.
+49. kevin roozen. 2009. “fan fic-�������������������������
+case study exploring the interplay of vernacular 
+literacies and disciplinary engagement. res in teach of 
+eng 44, 2: 136–169.
+"
+1,"author keywords
+mentoring;
+distributed mentoring;
+informal learning;
+fanfiction; online communities; digital youth. acm classification keywords
+h.5.3. group and organization interfaces: theory and models.
+","while “distributed mentoring” has been used previously by 
+other scholars [16,40,50] to describe mentors who are 
+geographically distributed or collectively based, our use of 
+the term is novel because of its grounding in hutchins’ 
+concept of distributed cognition, and because it is not just the 
+people but also the mentoring itself that is distributed. we
+identify seven key attributes of distributed mentoring that 
+distinguish it from traditional, offline forms of mentoring 
+and tie it both to hutchins’ theory of distributed cognition and to the particular affordances of networked publics. these 
+attributes 
+are: 
+aggregation, 
+accretion, 
+acceleration, 
+abundance, availability, asynchronicity, and affect.
+","following jenkins’ investigation of fanfiction, black [6–8]
+investigated language acquisition and identity formation 
+among english language learners participating in online 
+fanfiction
+communities. black analyzed the dialogue 
+between authors and readers in the form of story reviews and 
+authors’ notes. she found that these interactions helped the 
+authors shape their learning space and identity. black’s 
+focus, however, was primarily on how reviews affected individual authors’ identity formation over time. we still 
+lack insight into the complex structure of the network of 
+fanfiction reviews and the impact that an entire community 
+of reviewers may have on authors’ creative processes and 
+skill development. this topic is worth further exploration in 
+light of fanfiction’s popularity and the encouragement that 
+authors profess to feel because of reader reviews. 
+understanding this phenomenon in more depth may provide 
+insights into how young people could be encouraged to 
+develop their skills as writers as well as their enjoyment of 
+the writing process in arenas outside the fanfiction world. in 
+this way, our work contributes to existing work exploring the 
+use of fanfiction and other forms of fan creation to support 
+learning in formal and informal educational settings [43,49].
+","the following research questions guided this study:
+1. how and what do young people learn through their 
+involvement in fanfiction communities?
+2. what role does mentoring play in participants’ 
+learning, and what does this mentoring look like? our investigation centered on interviews with a sample of 28 
+young fanfiction authors and a nine-month period of 
+participant observations in fanfiction communities.
+","learning to write, learning about life
+our findings provide evidence of the learning and mentoring 
+occurring in fanfiction communities. it was striking, given 
+how many online communities are not supportive [23], that 
+every author we interviewed emphasized that support from 
+the community contributed to their development as writers.
+","grounded in hutchins’ [30] theory of distributed cognition, 
+distributed mentoring takes as its base the fact that 
+knowledge is distributed across people and artifacts and the 
+aggregation of this knowledge is greater and qualitatively 
+different from the knowledge residing in any one individual 
+or artifact. as a result, distributed mentoring is most likely to 
+be found in online affinity spaces [24,25]. consistent with 
+gee’s description of an affinity space but with a particular 
+focus on mentoring processes, we found that mentoring 
+resources were shared socially to extend and broaden the 
+influence and knowledge from the domain of the individual to 
+the group, so that a greater effect was achieved than through traditional mentoring. this was made possible and facilitated 
+specifically by networked publics and thus did not occur in fan 
+communities before the advent of widespread online 
+communication. as in distributed cognition, mentoring 
+processes are distributed among humans and artifacts in the 
+environment, and mentoring systems are formed where 
+complex structure emerges in ways that enhance the reach of 
+any single individual. however, distributed mentoring extends 
+hutchins’ concept of distributed cognition by focusing 
+specifically on mentoring processes as well as the influence of 
+networked technologies’ distinct affordances.
+","we are not able to claim for certain that distributed 
+mentoring directly affects writing ability. we set out to 
+understand and describe the type of mentoring present in 
+online fanfiction communities, leaving the verification of its 
+effect to later research. many of the authors we interviewed 
+believed that the feedback they received from the fanfiction
+community helped improve their writing, but our research 
+was observational in nature, not experimental. there are a 
+number of other potential learning resources in these young 
+authors’ lives that have certainly impacted their writing, 
+although we think on the basis of our findings that distributed 
+mentoring is one of them.
+",,,"50. jim sandherr, asia roberson, caitlin k. martin, 
+ugochi acholonu, and denise nacu. 2014. distributed 
+mentorship: increasing and diversifying youth access 
+to learning networks. panel at the 6th annual digital 
+media and learning conference (dml ’14). 
+51. aaron schwabach. 2009. the harry potter lexicon and 
+the world of fandom: fan fiction, outsider works, and 
+copyright. u of pitt law rev 70, 3: 387–434.
+52. robert l. selman. 1975. level of social perspective 
+taking and the development of empathy in children: 
+speculations from a social-cognitive viewpoint. j of 
+moral ed.
+53. gerry stahl, timothy koschmann, and daniel d. 
+suthers. 2006. computer-supported collaborative 
+learning. in the cambridge handbook of the learning 
+sciences, r. keith sawyer (ed.). cambridge university 
+press, cambridge.
+54. constance a. steinkuehler. 2004. learning in 
+massively multiplayer online games. in proceedings of 
+the 6th international conference on learning sciences 
+(icls ’04), 521–528.
+55. leanne stendell. 2005. fanfic and fan fact: how 
+current copyright law ignores the reality of copyright 
+owner and consumer interests in fan fiction. smu law 
+rev 58: 1551.
+"
+2,,"grounded in a sociocultural tradition of theory and research, 
+our work builds upon and extends previous research
+addressing the role of mentoring in affinity spaces and
+communities of practice [16,24,25,40,42,50] by delving into 
+the specific processes by which knowledge is shared, the 
+distinct affordances of networked platforms that facilitate 
+this sharing, and how writers experience these processes of 
+knowledge sharing. in this way, we extend prior work by 
+articulating a new theoretical understanding of networked 
+mentoring processes and how they differ from a traditional 
+model of mentoring. we believe that the theoretical construct 
+of distributed mentoring may be of benefit in understanding 
+learning processes in other formal and informal learning 
+environments.
+","affinity spaces, participatory culture, and connected 
+learning
+the present study takes as its starting point the recognition 
+that fanfiction communities function as affinity spaces
+[8,36]. gee [24] described an affinity space as an “interest-
+driven passion-fuelled site,” where personal differences in 
+age, gender, or class are less important than the shared 
+interest being explored. like communities of practice [42], 
+affinity spaces are distinct contexts of learning and identity 
+formation where novices become experts through guided 
+participation in the social structure of the community
+[24,25]. however, black [8] distinguishes between the two 
+by observing that in affinity spaces there are a range of 
+different novice and expert roles that vary based on context, 
+whereas in communities of practice, apprentices are being 
+trained toward one type of full participation using a well-
+defined body of knowledge. in a fanfiction community, 
+authors may be apprentices and masters at the same time, 
+possessing expertise in one aspect of the craft, such as 
+characterization, grammar, or canon knowledge, but 
+requiring assistance in other aspects. in the present work, we 
+expand on gee’s concept of affinity spaces and related work 
+around networked practices of feedback [8,38,41,54] by 
+exploring how the distinct affordances of networked 
+technologies shape and transform mentoring processes in 
+affinity spaces. in so doing, we demonstrate how the concept of 
+distributed mentoring offers new insights into collaborative 
+mentoring processes in networked environments.
+","we selected our three fandoms based upon the diversity of 
+each fandom’s genre (e.g. science fiction, fantasy, and 
+animation), medium (e.g. tv, book) and length of time in 
+existence. our selection was also guided by the research 
+team’s personal familiarity with the fandoms, as significant 
+fandom knowledge was necessary for understanding the 
+discussions and stories in these communities. we selected 
+three fandoms instead of focusing on one to make sure that 
+what we witnessed was not an aberration within a single 
+fandom. additionally, we chose widely popular fandoms to 
+ensure the size of the community and amount of material was 
+sufficient for our study. we purposely opted for fandoms 
+based on original story material (versus music group or 
+hobby-based fandoms) because they inspire the majority of 
+fanfiction writing as readers seek to extend the story and 
+utilize the original text as mentor text [20,35]. study sites
+fanfiction.net is the largest fanfiction repository on the 
+internet with over six million registered users; it hosts more than five million fanfictions across thousands of fandoms. as 
+of july 2015, the largest fandom on fanfiction.net was harry 
+potter, with 719,000 fanfictions, followed by naruto, with 
+386,000. in addition to hosting fanfiction, fanfiction.net has 
+social features, such as communities, forums, beta-reader 
+listings, and a private messaging system. users on 
+fanfiction.net have profile pages that list the stories they have 
+authored, the stories and authors they have marked as 
+favorites, and introductory profile messages.
+","writing fanfiction and getting instant feedback over 
+the past couple of years has improved my writing 
+significantly. i still have a long way to go, but i mostly 
+avoid the standard pitfalls that young writers fall into 
+such as poor flow and sentence construction, flat 
+dialogue, and trivial descriptions.
+- author 19 (my little pony)for most of the authors we interviewed, fanfiction was their 
+first foray into creative writing, and it was fanfiction that 
+taught them that they liked writing and gave them the desire 
+to pursue original fiction. author 11 has already produced an 
+original fiction and attributed its existence to the confidence 
+gained from writing fanfiction:my original novel is due for publication next month. 
+it's a fantasy fiction, part one of a planned four series. 
+if it wasn't for the confidence i got from writing my 
+fanfictions, i would never have even dreamed of self-
+publishing my own work.
+- author 11 (harry potter)authors also learned life lessons beyond writing from 
+participating in fanfiction communities. author 26 (my 
+little pony) felt that the creative thinking involved in writing 
+fanfiction helped him become more open-minded about 
+other things, stating, “if anything, thinking of premises for 
+stories that can fit inside of canon has taught me to think 
+outside of the box and expand things.” author 27 (my little 
+pony) noted that in addition to learning about grammar, he 
+has also learned to be more tolerant and willing to help others 
+because of his community participation.
+","distributed mentoring also pushes at the framework for 
+traditional mentoring models established by dawson [18]. 
+most of these design elements become irrelevant or extremely 
+varied within the informal structure of the online fanfiction
+community. 
+selection 
+and 
+matching 
+of 
+mentoring
+relationships, crucial components of most traditional models, 
+are entirely self-driven in fanfiction communities. roles, 
+cardinality (number of relationships), ties, relative seniority, 
+and time vary both by individuals and by task (e.g.
+proofreading versus plotting). there is no mentorship training, 
+the rewards are all intrinsic, and the monitoring is 
+crowdsourced. yet, powerful and effective mentorship occurs 
+daily within these sites for thousands of authors. therefore, a 
+new mentoring model is happening that is uniquely supported 
+by the affordances of networked technologies and for which 
+we must account. the seven attributes we identified—
+aggregation, accretion, acceleration, abundance, availability, 
+asynchronicity, and affect—illustrate how the affordances of 
+networked technologies give rise to distributed mentoring and 
+set it apart from traditional mentoring.
+","as distributed mentoring is a nascent concept, there are many 
+opportunities to explore regarding its effectiveness and 
+application, as well as its limitations. more work is needed to determine how distributed mentoring impacts writing quality, 
+especially in comparison with other types of mentoring or 
+formal education. does the computer-mediated nature of 
+distributed mentoring allow for a more diverse and therefore 
+richer mentoring experience compared to in-person peer 
+mentoring? does writing ability improve more when writers 
+experience distributed mentoring compared to communicating 
+independently with multiple mentors via the internet?
+",,,"56. anselm l. strauss and barney g. glaser. 1967. the 
+discovery of grounded ������������������������
+qualitative research. aldine pub. co., chicago.
+57. rachel l. stroude. 2010. complimentary creation: 
+protecting fan fiction as fair use. marquette intellect 
+prop law rev 14, 1: 191.
+58. catherine tosenberger. 2008. homosexuality at the 
+online hogwarts: harry potter slash fanfiction. child
+lit 36, 1: 185–207.
+59. sherry turkle. 2011. �������������������������������
+more from technology and less from each other. 
+�����������������������
+60. kevin veale. 2013. capital, dialogue, and community 
+engagement—my little pony: friendship is magic 
+understood as an alternate reality game. transform 
+works & cult 14.
+61. joseph b. walther. 1996. computer-mediated 
+communication: impersonal, interpersonal, and 
+hyperpersonal interaction. comm res 23, 1: 3–43.
+62. emily weinstein, zachary clark, dona dibartolomeo, 
+and katie davis. 2014. a decline in creativity? it 
+depends on the domain. creativ res j 26, 2: 174–184.
+"
+3,,,"the present work is also informed by participatory culture 
+and connected learning principles, which networked affinity 
+spaces are well positioned to support. according to jenkins
+[36], a participatory culture is “a culture with relatively low 
+barriers to artistic expression and civic engagement, strong 
+support for creating and sharing creations, and some type of 
+informal mentorship whereby experienced participants pass 
+along knowledge to novices” [36]. fanfiction communities 
+promote participatory culture by virtue of their low barrier to 
+entry—anyone of any age can write and publish a story—and 
+their high level of peer support and mentoring. the concept 
+of distributed mentoring extends jenkins’ work around 
+participatory culture by delving more deeply into the 
+relationship between the affordances of networked technologies and the mentoring processes we observed in 
+fanfiction communities. in so doing, we draw on ito et al.’s 
+model of connected learning [33], which is defined by three 
+core properties: learners come together around a shared 
+purpose, a focus on production, and openly networked 
+infrastructures. our work illustrates
+how these three 
+properties support and give rise to new forms of openly 
+networked, collaborative mentoring.
+","fimfiction.net is a single-fandom fanfiction repository 
+dedicated to the television show my little pony: friendship 
+is magic. as of july 2015, fimfiction.net had 185,014 users 
+and 86,009 published stories [22]. once users create an
+account on fimfiction.net, they can access user groups, 
+which include a common fanfiction repository and a 
+discussion forum. any member can create a group and there 
+are more than 7,000 groups in existence. group topics range 
+from support groups for writers with learning disorders to 
+groups 
+dedicated 
+to 
+favorite 
+minor 
+characters. 
+fimfiction.net user pages are more customizable than 
+profile pages on fanfiction.net, and users have the option to 
+write blog entries, leave public comments on other users’ pages,
+and create custom content modules and image galleries. like 
+fanfiction.net, fimfiction.net also has a private messaging 
+system where users can communicate directly.
+","some authors found emotional support or release from 
+fanfiction. author 16 felt that the response she received from 
+the fanfiction community helped her get through a difficult 
+period in her life:
+i've received literally thousands of positive reviews 
+and some truly wonderful letters and messages from 
+people who have been genuinely touched by my 
+writing, and it's been a massive confidence boost that helped me get through university without quitting and 
+still helps me today if i'm feeling down.
+- author 16 (harry potter)diverse forms of mentoring
+in seeking to determine how the learning in fanfiction
+communities takes place, we uncovered diverse forms of 
+mentoring. authors we interviewed revealed that they 
+experienced mentoring in contexts beyond a traditional 
+dyadic mentor/mentee relationship. fanfiction communities 
+connect thousands of authors together and provide the 
+opportunity for immediate and diverse feedback. authors 
+described a rich network of resources that they could draw 
+on which included fanfiction reviews, fimfiction.net user 
+groups, beta readers, co-writers, skype groups, podcasts, 
+internet relay chat (irc), and other message boards and 
+communities. authors received and provided assistance 
+through these channels in one-to-one, one-to-many, and 
+many-to-one mentoring instances. individually, these 
+interactions with readers via story reviews or other authors 
+via message boards may be too small to be considered 
+mentoring, but in the aggregate they form a richer, more 
+complete form of mentoring that is distributed across many 
+participants and communication channels.
+","previous work has detailed the distinct affordances of 
+networked technologies [10,61] as well as how they support 
+new social forms, such as participatory culture [35,36] and 
+connected learning
+[33]. the attributes of distributed 
+mentoring we have identified are consistent with the 
+characteristics of participatory culture (e.g. low barriers to 
+entry, informal mentorship) and supported by the core 
+properties of connected learning (shared purpose, production-
+centered, openly networked). however, the theory of 
+distributed mentoring extends prior work by focusing 
+explicitly on the interplay between mentoring and networked 
+technologies, showing how the affordances of networked 
+technologies shape mentoring processes in new ways. for instance, the persistent quality of computer-mediated 
+communication (cmc) makes it possible for authors to 
+consider multiple voices together, both in the moment and at 
+a later date, supporting the attributes of aggregation, 
+accretion, acceleration, and asynchronicity [19,53]. this 
+may be challenging in non-cmc contexts, where human 
+memory limits the number of previous responses a 
+participant can consider. in addition, the public nature of 
+communicating in networked environments like fanfiction
+sites allows for a high level of interaction among reviewers, 
+who can react to and build on each other’s comments asynchronously and over the long term. this quality of 
+networked communication supports the attributes of 
+abundance, availability, and affect. in contrast, traditional 
+ideas of mentoring are grounded primarily in one-to-one 
+relationships, which are easier to maintain in the physical 
+world. mentoring facilitated by the internet can move past 
+the limitations of the physical world to allow numerous 
+mentors to engage each other on the same topic 
+asynchronously when providing advice to mentees.
+","additionally, we did not investigate how website structure and 
+design aids or impedes distributed mentoring, although we did 
+observe different styles of distributed mentoring on different 
+websites. writers on fimfiction.net frequently received help on 
+user group forums, while writers on fanfiction.net often 
+received help from reviews in reply to authors’ notes. we 
+wonder if a particular style of feedback mechanism (e.g., 
+forums) yields superior mentoring experiences. also, do more 
+opportunities for users to leave feedback actually yield more 
+feedback, and what is the quality of this feedback?
+",,,
+4,,,"mentoring
+mentoring relationships represent a common thread in 
+descriptions of affinity spaces, communities of practice, 
+participatory culture, and connected learning. mentors 
+provide community participants with support in developing 
+the skills and competencies necessary for full and productive 
+participation in the community. in fanfiction communities 
+specifically, informal peer mentors help authors improve 
+their writing skills by providing feedback and answering 
+questions [8].
+","we also interacted with and observed the doctor who 
+fanfiction repository a teaspoon and an open mind
+(whofic.com), the my little pony: friendship is magic 
+discussion board ponychan.net, livejournal.com fanfiction
+communities, and reddit.com fanfiction subreddits.
+","differences in the affordances of fanfiction platforms give 
+rise 
+to 
+distinct 
+mentoring 
+forms. 
+for 
+instance, 
+fimfiction.net includes a number of user groups, which 
+several of the authors we interviewed said they relied on as a 
+writing resource. each user group has an associated forum, 
+and in the writing help groups we observed, the members 
+used these forums as a place to elicit advice on problematic 
+aspects of their fanfiction stories (e.g. characterization and 
+writing style) and to discuss general writing tips. the forums 
+are publicly accessible, so any group member can respond to 
+any post. in some cases, respondents would provide advice 
+to the original poster independently without referencing what 
+other respondents stated, but in other cases respondents 
+would debate, correct, or agree with the advice provided by 
+other respondents, often adding to it. for example, one poster 
+described a rubric for creating an antagonist, and 21 group 
+members posted completed rubrics while four members 
+contributed additional information on the topic and 
+commented on others’ rubrics. one respondent added a ‘map 
+of evil’ with different categories and characteristics of evil 
+traits and left a caveat stating that “not all antagonists have 
+to be evil. in fact, making your reader sympathize with an 
+antagonist is an advanced narrative technique.” another 
+respondent who had previously posted a completed rubric 
+replied “funny you should mention this. i plan to try this out 
+with my next antagonist.” these lively forum posts provide 
+the original posters with a rich set of differing perspectives, 
+something they would not have had access to if they had asked 
+questions through more private, one-to-one channels to 
+individual mentors (we term this aggregation, detailed below).
+","benefits of distributed mentoring
+the fanfiction authors emphasized how much they valued 
+the mentoring that they received from the larger community, 
+which they viewed as an important part of their growth as 
+writers as well as a morale boost to keep writing (affect). the 
+unique style of distributed mentoring available in fanfiction
+communities is one reason why young authors often choose 
+to practice writing by creating fanfiction before attempting 
+to write original fiction. authors mentioned that the feedback 
+that they received from the fanfiction community was a key 
+reason for their participation and that they viewed fanfiction
+as an excellent training ground for aspiring writers who hope 
+to produce original fiction one day. one published writer 
+who had started out writing fanfiction commented in a blog 
+post that she received more feedback in a week on her 
+fanfiction than she had in several years on her original 
+fiction. in the communities that we investigated, participants 
+were very supportive of each other and eager to provide 
+informal mentoring. the communities also provided a 
+knowledge base and instant connection based on the fandom 
+for anyone wishing to participate. the benefits derived from distributed mentoring are similar 
+to the benefits associated with distributed cognition [30].
+distributed mentoring provides artifacts that are embodied 
+outside the author, such as forum responses, reviews, private 
+messages, and author’s notes. these artifacts, as in 
+distributed cognition, allow for the coordination and 
+aggregation of mentoring efforts. as well, the distribution of 
+access to information among these artifacts in the contexts 
+we studied allowed for error checking in the form of 
+agreement, 
+disagreement, 
+and 
+discussion 
+among 
+respondents, just like in a cognitive system.
+",,,,
+5,,,"the term “mentoring” has been used in so many different 
+ways and contexts that experiences referred to as mentoring 
+may be quite distinct from each other. as a result, dawson
+[18] argued for the specification of mentoring models and 
+provided a common framework for researchers to use in 
+crafting their definitions. mentoring is not limited to formal 
+relationships between an older, more experienced mentor 
+and a younger, less experienced mentee, which dawson 
+refers to as “traditional,” but instead may take place between 
+participants of all ages, with different levels of engagement 
+and formality. based on a survey of mentoring literature and 
+feedback 
+from 
+mentoring 
+professionals, 
+dawson’s
+framework contains sixteen dimensions along which to 
+classify 
+mentoring 
+relationships; 
+objectives, 
+roles, 
+cardinality, tie strength, relative seniority, time, selection, 
+matching, activities, resources and tools, role of technology, 
+training, rewards, policy, monitoring, and termination.
+drawing on dawson’s [18] mentoring framework, we classify 
+fanfiction sites as informal, weakly tied, peer-based, many-to-
+one or many-to-many, cmc-only [21] mentoring intended to 
+improve certain skills—in the present analysis, writing skills. 
+the mentoring is informal and weakly tied because the 
+engagement between authors may be spontaneous and 
+limited to a single incident, or it may build into a longer 
+relationship if the authors are interested. the community 
+participants taking part in this mentoring are all peers in the 
+same affinity space in which there is no prescribed formal 
+hierarchy. the large number of participants involved in the 
+mentoring indicates a many-to-one or many-to-many 
+experience that is distinct from simply having multiple 
+mentors.
+","interviews
+we conducted in-depth interviews with 28 fanfiction authors 
+via the private messaging systems on fanfiction.net and 
+fimfiction.net. sixteen of the authors were members of 
+fanfiction.net and 12 were members of fimfiction.net. 
+twelve authors wrote my little pony fanfiction, nine authors 
+wrote doctor who fiction, and seven authors wrote harry 
+potter fiction. following previous research involving online communities
+[17,45], we selected authors through a process of purposive
+sampling, whereby members of the research team identified 
+individuals who were active authors and reviewers in one of 
+the chosen fandoms. we did this by looking at published 
+stories on fanfiction.com and fimfiction.com with at least a 
+small number of reviews and then viewing the author’s user 
+profile to ascertain if they were currently active on the site, had 
+regularly received reviews on their writing and were likely 
+within the age and language demographic of the study.
+","many authors experienced mentoring in fanfiction
+communities as a reciprocal process. author 6 described how the mentoring she received early on inspired her to provide 
+the same support in a one-on-one mentoring context for a 
+new writer:i'll just add to the mentoring point - it's sort of come full 
+cycle for me. when the girl pm'd [private messaged] me 
+asking for advice, i did realise that i used to be her. back 
+in the day i wrote so badly that people flaming and 
+trolling me would've been perfectly viable. luckily i had 
+people to push me up and advise me to turn me into the 
+author i am today, so i found it really important to do 
+exactly the same for her.
+- author 6 (doctor who)
+","the whole of the mentoring experience provided by 
+distributed mentoring is greater than the sum of its parts. 
+distributed mentoring creates richer mentoring experiences 
+than individual mentors alone could provide, much like how 
+distributed cognition allows cognitive systems to accomplish 
+tasks that would be otherwise impossible for individuals to 
+complete. a single mentor can provide only one perspective, 
+and if a writer asks multiple mentors independently, it will 
+be up to the author to decide which pieces of advice are 
+sound. in fimfiction.net group discussions, authors can 
+learn from the different pieces of advice individually and 
+also learn from the discussion between the respondents. in 
+these discussions, bad advice is corrected, good advice is 
+validated, and more nuanced answers to questions form as a result of the respondents building off of each other
+(aggregation, 
+accretion, 
+and 
+acceleration). 
+on 
+fanfiction.net, authors are able to learn from reviews that 
+focus on different aspects of the story and from reviewers 
+who may be more critical or more positive. in addition, 
+inflammatory reviews are moderated by reviewers’ 
+responses, and responses to author’s notes provide targeted 
+assistance for authors.
+",,,,
+6,,,"the advent of networked technologies has opened up new 
+possibilities for learning and mentoring
+that stretch 
+dawson’s [18] framework and reveal its limitations. stahl, 
+koschmann, and suthers [53] referred to “fundamentally 
+social technologies” to describe technologies with specific 
+affordances that support social interactions and group learning [53]. with respect to mentoring in particular, 
+affordances 
+such 
+as 
+asynchronous 
+communication, 
+anonymity, and persistent, searchable content introduce 
+advantages 
+of 
+computer-mediated 
+mentoring 
+versus 
+traditional mentoring, including a record of interactions, 
+equalization of status, and reduced interaction costs [21]. 
+communication within online fanfiction communities is by 
+its very nature computer-mediated and, therefore, generates 
+a persistent record of the interactions between authors and 
+readers for both to learn from at their leisure. there is no 
+overt distinction among authors on their profile pages; all 
+authors may choose whether or not to include demographic 
+information. in such a context, the age-based distinctions 
+typical of offline settings are not as overt in online fanfiction
+communities, providing teens and emerging adults with 
+unique opportunities to assume mentoring roles [32]. in addition 
+to the decreased cost of reader interactions mentioned earlier, 
+these qualities distinguish the mentoring occurring in fanfiction
+communities from more traditional, non-computer-mediated 
+mentoring.
+","we chose to target authors between the ages of 18-25 so that 
+we might better identify individuals who had recently 
+encountered—or were currently engaged in—a mentoring 
+experience in their formative years; however, some authors 
+did fall out of this range, with an average age of 22.8, the 
+youngest 13 and the eldest 30. we also chose to interview authors who were native english speakers and who had been 
+writing fanfiction for more than one year.
+","the advice that author 6 received in lieu of inflammatory 
+comments also illustrates the supportive nature of the 
+fanfiction community, where groups of authors are willing to 
+provide feedback in order to help new writers grow (the 
+influence of affect is described below).
+","as in other affinity spaces, participants in online fanfiction
+communities can be any age, from any location, and of any 
+experience level. there are no defined roles of “master” and 
+“apprentice” in these communities because one author might 
+possess deep knowledge on a certain topic, e.g. 
+characterization, and yet be lacking in another aspect, e.g.
+grammar. this diversity of expertise and the lack of defined 
+roles in online fanfiction communities are of benefit in 
+distributed 
+mentoring 
+situations 
+because 
+different 
+participants can bring up different perspectives in their 
+feedback. also, because distributed mentoring is peer-based, 
+or horizontal, rather than hierarchical, an author who asks for 
+assistance can turn around and provide feedback for another 
+author on a different topic. the authors we interviewed 
+revealed the important role that reciprocity played in the 
+fanfiction community, indicating that the help they received 
+inspired them to help others (acceleration).
+",,,,
+7,,,"distributed cognition and mentoring
+hutchins’ [30] theory of distributed cognition is useful for 
+understanding the dynamics involved in coordinated group 
+processes, such as those that are found in affinity spaces like 
+online fanfiction communities. instead of considering the 
+individual mind as the unit of cognitive analysis, distributed 
+cognition takes into account a system consisting of the 
+individuals as well as their “information environment,” 
+which includes the tools and artifacts used as part of 
+cognition [31].
+since hutchins’ initial exploration in offline environments, 
+distributed cognition has been applied to computer-mediated 
+interactions [15] and promoted as a theoretical foundation for 
+human-computer interaction [28]. in addition, aragon and 
+williams [4] drew upon distributed cognition in their study 
+of distributed affect in collaborative creativity, expanding the 
+focus of communication to include not only cognition but 
+emotion.
+","in order to protect the privacy of our subjects, and given the 
+complex issue of gender binaries and fluidity—which is 
+often the subject of fanfiction stories—we did not require 
+them to identify their gender. we instead chose to seek a 
+gender balance through the selection of our primary research 
+sites: fanfiction.net and fimfiction.net. fanfiction.net has a 
+primarily female audience [1] while fimfiction.net’s 
+audience is predominantly male [2]. of those subjects who 
+did openly offer a gender identity, 9 identified as female (all 
+were from fanfiction.net) and 3 identified as male (with 2 
+from fimfiction.net and one from fanfiction.net).
+","author 19 (my little pony) went so far as to express that one 
+of the key reasons for participating in fanfiction was the 
+review structure, stating “i write fanfiction because you can 
+get immediate feedback from an active fandom. i have to play 
+my part as well, and give back to the community.”the importance of reviews
+fanfiction reviews present a particularly fertile ground for 
+mentoring, where authors can learn from the tens, hundreds, 
+or even thousands of reviews left on their work. 
+fanfiction.net’s user base is much larger and more diverse 
+than fimfiction.net’s, which may explain why it lacks the 
+user 
+group 
+activity 
+and 
+community 
+feeling 
+of 
+fimfiction.net. however, stories posted on fanfiction.net 
+tend to receive a large number of reader reviews; therefore, 
+we investigated the mentoring present in these reviews as 
+another space for a distributed form of mentoring.
+","participation in affinity spaces and participatory cultures is 
+predicated on participants’ intersubjective understanding of 
+the context in which they are taking part, just like the ship 
+navigators and pilots described by hutchins [30] and 
+hutchins and klausen [31]. in our observations, the 
+substantial number of reviews involving some form of 
+fandom discussion provided evidence that authors and 
+reviewers share a common base of language and knowledge. 
+indeed, their shared knowledge goes beyond what is 
+represented in the canonical literature to include fan canon 
+notions of untold character backstories, favored relationship 
+pairings, and popular plot conspiracies. our analysis 
+suggests that the communitarian ethos present in the civil, 
+reciprocal exchanges in online fanfiction communities is 
+likely encouraged by the membership that authors feel as 
+participants in the community.
+",,,,
+8,,,"the durable and distributed nature of online text-based 
+communication allows for easy discussion, coordination, and 
+error checking between participants dispersed across the 
+globe [19,53]. distributed cognition aids the understanding 
+of a specific type of interaction in fanfiction communities: 
+mentoring among participants. a fanfiction author residing 
+in a small town in the united states can receive reviews and 
+advice from individuals in any location, at any time, and 
+much like in a cognitive system, each individual in this 
+mentoring system can build on the other participants’ 
+insights. interactions among geographically dispersed 
+participants are facilitated by their shared knowledge of and 
+interest in a particular fandom, including its characters, plot 
+points, and universe. although this mentoring system 
+features key attributes of distributed cognition, such as the 
+embodied representation of information in artifacts of the 
+system (e.g. reviews) and the existence of a cognitive 
+ecosystem, distributed mentoring also includes many additional features enabled by the affordances of networked 
+publics, such as the ability to easily set up asynchronous 
+communication, or the aggregation of pieces of information 
+that ordinarily might be too small to provide meaningful 
+mentoring, but that taken as a whole enable learning and skill 
+development.
+","the interviews included questions about community 
+participation, mentoring, writing skills, and identity. 
+adopting 
+charmaz’s 
+constructivist 
+grounded 
+theory 
+approach that builds upon glaser, strauss, and corbin’s 
+methods [13], and guided by our research questions [48,56],
+members of our research team created a list of dominant 
+themes that emerged directly from a close reading of the 
+interview transcripts [56]. through weekly research team 
+meetings in which we reviewed the transcripts, discussed 
+relationships among the themes, and wrote memos reflecting 
+upon our process and observations, we collectively distilled 
+the themes into the following four categories: 1) learning from 
+writing fanfiction; 2) fanfiction’s impact on life; 3) mentoring; 
+and 4) the importance of fanfiction reviews. we used these 
+themes to guide the focus of our participant observations.
+","we observed that many reviewers provide thoughtful, 
+detailed recommendations. these reviews let authors know 
+specifically what they are doing well and what they need to 
+work on. author 23 recalled his experience as a beginning 
+author as motivation to provide feedback:
+i usually search for beginning authors and leave tips 
+on how to improve. such as better pacing, less telling, 
+and most of all, trying to tone down a mary sue [self-
+insertion] type character or red and black alicorn oc 
+[original characters]. what prompts me to leave
+feedback is that i used to be as inexperienced or 
+beginning as a newbie on the site just like them not 
+too long ago, so if i can help in any way, i'm going to 
+try my hardest.
+- author 23 (my little pony)often, authors of substantive reviews identified themselves 
+as part of the larger fandom community by demonstrating 
+deep knowledge of the canon or fanon material and by 
+providing corrective feedback for authors who made 
+mistakes with regard to the canon:okay, i have one slight issue. hermione doesn’t learn 
+the patronus charm until her fifth year, so did being 
+inside of harry’s head give her the ability to do it? if 
+so, how would she know it was an otter if she wasn’t 
+supposed to have learned it yet.  while these types of detailed reviews may be the most
+relevant for helping writers improve their craft, the 
+cumulative encouragement contained in a collection of many 
+shallow positive reviews (e.g. “great story!”) must not be 
+discounted. we learned from participant observation and 
+interviews that reviews are a crucial source of motivation for 
+authors, and receiving a large number of any type of 
+encouraging reviews reportedly helps authors persevere in an 
+activity that requires substantial effort but provides few 
+rewards aside from personal satisfaction. the cumulative 
+encouragement present in large numbers of reviews (what we 
+term abundance, described in more detail below) may also 
+help authors understand if they are on the right track in terms 
+of story aspects like plot, pacing, and writing style. author 4 
+indicated she has written hundreds of reviews because she 
+knows how important they are: 
+","implications
+previous research investigating fanfiction has looked at how 
+the mentoring that authors receive via interactions with other 
+community members impacts their identity [6–8] and 
+improves their writing ability [35]. however, there was a 
+lack of research into the relationship between these 
+individual-level effects and the group-level qualities of 
+fanfiction communities, such as the massive scale of 
+mentoring; its distributed nature across individuals, time, and 
+platforms; and the distinct characteristics of author-mentor 
+and mentor-mentor interactions. in particular, our work 
+extends black’s research [6–8] by broadening the focus 
+beyond a small number of fanfiction authors, a single 
+fanfiction repository (fanfiction.net), and a single fanfictiongenre (anime). this broader view allowed us to detect 
+common patterns of mentoring across different fanfiction
+communities, indicating that distributed mentoring is not 
+limited to one specific context or group of participants. in 
+addition, by focusing on mentoring at the group- rather than 
+the individual-level, we were able to document the patterns 
+and effects of multiple sources of feedback in the aggregate. 
+central to this analysis was an enumeration of the distinct 
+affordances of networked technologies and how they 
+distinguish distributed mentoring from traditional models of 
+mentoring. by extending black’s research [6–8] in this way, our 
+work provides new insight into leveraging the affordances of 
+networked publics to support and promote collaborative 
+learning.
+",,,,
+9,,,"the current study builds on previous work by investigating 
+the distinct mentoring processes involved in online fanfiction
+communities. we focused our research on three popular 
+fandoms: harry potter, doctor who, and my little pony: 
+friendship is magic. previous research related to these 
+fandoms has focused on fan identities [39], gender and 
+sexuality [26,58], civic engagement and fan activism
+[27,37], copyright issues [14,51], and fan community 
+engagement [60], rather than on mentoring processes related 
+to fanfiction writing in these fandoms.
+","participant observation
+we used participant observations to explore in situ the themes 
+that surfaced in the interviews and to further refine our theory. 
+following boellstorff et al. [9], we were transparent about our 
+position as researchers throughout the process.
+","according to my general user stats page, i've 
+submitted 796 reviews on ffn dot net. i usually leave 
+reviews for stories i really enjoy, or for stories i find 
+don't have many reviews. i make it an effort to review 
+everything i read. i know how much reviews are 
+appreciated on this site.
+- author 4 (doctor who)overall, we found that reviewers were primarily providing 
+supportive comments on the text rather than negative 
+responses. our interviews and observations suggest that 
+shared interest in the fandom generates a sense of kinship and 
+contributes to the positive atmosphere of the community. in 
+the relatively infrequent instances when negative comments 
+were posted, we observed far more community members 
+come to the defense of the author of the story being 
+criticized. one controversial fanfiction story contained 
+several flame reviews but even more reviews like this one 
+defending the author:
+just ignore the stupid tart-lover [reference to a doctor who 
+character] who is leaving those horrid reviews. she can take 
+all her stuffy little remarks and shove them where the light 
+don’t shine. this is a fantastic story, i just had a shitty day 
+and this story has really helped me smile.
+this quote also illustrates the fact that many fanfiction
+reviewers are engaged in dialogue with other reviewers and 
+authors and are considering other feedback and notes as they 
+construct their reviews. in other words, the mentoring 
+activity is not focused exclusively on a single author, but 
+demonstrates high levels of interaction among reviewers, 
+what we term accretion and acceleration (described below). 
+this emergent, complex structure within the mentoring 
+activity is a key attribute of distributed mentoring.
+","for instance, the insights from the present study suggest that 
+distributed mentoring could be successfully applied to 
+formal educational contexts as a useful peer mentoring 
+mechanism, building on previous related work exploring the 
+incorporation of fanfiction in classroom settings [43,49]. an 
+internet-based peer review system joining a number of 
+classrooms together would help facilitate distributed 
+mentoring. students in one classroom could be tasked with 
+contributing comments to the work of students in other 
+classrooms. by interacting with students from another 
+classroom, located in a different school or perhaps even a 
+different city or country, the pseudonymous nature of 
+distributed mentoring would be maintained. this geographic 
+and emotional distance could help to prevent feelings of 
+inhibition that students might feel if asked to give and receive 
+feedback from the classmates they see and interact with on a 
+daily basis. moreover, students would be able to benefit from 
+encountering, considering, and responding to perspectives 
+different from their own [29,52]. gee states that “[networked 
+publics] are allowing people with no official credentials from 
+formal institutions to become experts,” and this development 
+of expertise can be encouraged in classroom settings [25].
+our findings suggest that students should be encouraged to 
+leave a small amount of feedback for each piece of writing 
+they are to review, making sure to read and build upon 
+previous comments. in this way, students could learn from 
+the interactions of their reviewers in addition to the different 
+perspectives presented in each review, which is what makes 
+distributed mentoring such a rich learning experience. the 
+attributes observed in spontaneous forms of distributed 
+mentoring could be used to evaluate and refine these planned 
+mentoring systems. black [8] saw adolescents motivated to 
+participate in fanfiction spaces by the experience of 
+procedural knowledge (as contrasted to propositional 
+knowledge) and opportunities to contribute to the function of 
+the space. therefore, a distributing mentoring model in the 
+classroom would need to maintain such features to sustain 
+student engagement.
+",,,,
+10,,,,"to start our participant observation and help integrate 
+ourselves into the community [6,9], each team member wrote 
+a short fanfiction on a fandom of his or her choice and 
+published it on a relevant fanfiction repository. this exercise 
+provided us with an understanding of the author’s 
+perspective and lent us credibility as fans when contacting 
+other authors.
+","the seven attributes of distributed mentoring
+the themes emerging from the author interviews guided our 
+participant observations and led us to identify seven 
+attributes that describe the mentoring processes we observed. 
+these attributes are: aggregation, accretion, acceleration, 
+abundance, availability, asynchronicity, and affect. despite 
+some differences in mentoring style across platforms (e.g. 
+user groups on fimfiction.net), we found evidence of all 
+seven attributes across the fandoms and platforms we 
+studied.
+aggregation: authors experienced mentoring from a number 
+of different sources. powered by the openly networked 
+nature of computer-mediated communication, the authors in 
+our study received numerous small pieces of advice in the 
+form of story reviews or discussion forum responses that, as 
+in distributed cognition [30], created a whole far greater than 
+the sum of its parts. the feedback provided independently by 
+each participant may not be sufficient in either depth or 
+longevity to be considered mentoring on its own. instead, 
+authors are being mentored in the aggregate by the fanfiction
+community at large.
+","in addition, distributed mentoring holds implications for the 
+design of online affinity spaces. as the differences between
+fanfiction.net and fimfiction.net illustrate, website design 
+facilitates or discourages different types of interactions. the common features across these sites, such as comment threads 
+and discussion groups, suggest that these interest-driven 
+communities already afford rich distributed mentoring. the 
+power of distributed mentoring comes in part from the 
+numerous responses or reviews that authors receive. as an 
+author receives more replies, the mentoring experience 
+becomes richer. more could be done, however, to help 
+authors who are not receiving a lot of feedback to benefit 
+from distributed mentoring. although it is currently possible 
+to browse fanfiction sites by number of reviews, readers have 
+to intentionally seek out stories with few reviews. a simple 
+recommender that directs community members who have 
+just left a review to similar stories that have few or no 
+reviews may help to channel feedback to stories that need it 
+most. such a system could also steer readers and writers to 
+similar stories, thus affording more community formation 
+and participation. affective features such as easy ways to 
+“like” or categorize stories could enhance positive 
+experiences. developers could also enhance the mentoring 
+experience for contributors who receive large numbers of 
+reviews by adding tools that use text mining techniques to 
+automatically synthesize common themes or contrasting 
+viewpoints.
+",,,,
+11,,,,"the member-created groups on fimfiction.net served as a 
+primary site for our participant observations. the five 
+fimfiction.net groups observed each had between 1,000 and 
+5,000 members and focused on writing help and discussion. 
+three groups were spaces for struggling authors to ask 
+questions, one group was a “school” to help writers learn 
+their craft, and the largest, most active group was a general 
+writing community that allowed questions and discussion. we observed these groups over a period of nine months, taking 
+notes and screen captures of what we saw. each team member 
+spent 5-10 hours per week observing the communities. this 
+time was spent reading stories and reviews of recently published 
+works and older stories, viewing reddit and community posts, 
+and participating in writing events within the communities such as national novel writing month (nanowrimo). additionally, 
+we communicated informally via private message with 
+members of the fimfiction.net groups to ask them questions 
+about their participation; these members were chosen when 
+interesting behavior or topics were observed. none of the
+individuals
+contacted 
+informally 
+through
+participant 
+observation were also part of the interview phase of the study. our
+observations also included
+author and reviewer 
+communications on fanfiction.net. because fanfiction.net 
+lacks the group activity of fimfiction.net, reader reviews 
+and author’s notes are potentially the richest source of 
+publicly viewable mentoring data on the site. any reader can 
+leave a review of a fanfiction on fanfiction.net, either 
+anonymously without creating an account or through a 
+registered account. it is common practice for authors to leave 
+notes either at the beginning or end of their work, and these 
+notes will sometimes reference comments they have received 
+in previous reviews or ask for reviewers’ input on specific 
+aspects of the work. we spent 10-20 collective hours each 
+week reading stories, reviews, profiles, and author’s notes on 
+fanfiction.net.
+","i can't think of any one person [in particular who has 
+influenced me], i take inspiration from a number of 
+people. 
+- (author 19, my little pony)based on our observation of reviews, an author who receives 
+even ten reviews on his or her work is likely to receive five 
+targeted pieces of feedback in addition to several other 
+encouraging remarks. together, this aggregated feedback 
+may let authors know what they have done well and what is 
+lacking in their fanfiction stories. even numerous shallow 
+positive reviews can show authors collectively that they are 
+on the right track.
+",,,,,
+12,,,,"our analyses of the participant observations served two 
+primary purposes: 1) to corroborate themes surfaced in the 
+interviews and 2) to examine processes of interpersonal 
+communication among members of the fan communities. 
+during the nine-month period of data collection, our team 
+conducted a cumulative total of over a thousand hours of 
+participant observation, generating several hundred pages of 
+field notes, memos, and digests. this documentation was
+shared amongst the team and discussed in weekly team 
+meetings.
+","accretion: reviewers themselves interacted with each other 
+in a persistent, cumulative fashion, enabling an accretion of 
+knowledge to facilitate the author’s learning process. the 
+mentoring activity pertaining to the creation of an antagonist 
+is an example of this (described on p. 6), where the process 
+of developing a compelling antagonist in one’s story was 
+carefully deconstructed by a group whose members built 
+upon and extended previously posted commentary. through 
+these distributed postings and exchanges, the information 
+accreted over time, enabled by the persistent nature of the 
+forum. the advice that authors received from this mentoring 
+experience included targeted, cumulatively sophisticated and 
+detailed feedback on their fanfiction stories and thorough 
+answers to their questions posted on forums or in authors’ 
+notes. acceleration: it is sometimes the case that authors receive 
+conflicting feedback in the variety of reviews of their work. 
+while this may at first seem confusing, we found that 
+discussions and conflicts between reviewers typically yield a 
+more complex and nuanced body of feedback as reviewers 
+point out holes in each other's arguments or reinforce each 
+other’s statements through agreement, cite deep fandom knowledge, and accelerate the process of learning through 
+active discussion. we observed an interwoven network of 
+reviewer responses delving into highly specialized knowledge 
+and buttressing subtle points of argument.
+",,,,,
+13,,,,"during these discussions, we identified and highlighted 
+evidence related to the dominant themes surfaced in the 
+interviews. we paid particular attention to processes of 
+mentoring among community participants. during the course 
+of these weekly discussions and follow up analytic memos, 
+we noted that mentoring appeared to be “distributed” across 
+participants. authors received guidance from multiple 
+reviewers, and these reviewers sometimes referenced and 
+built on comments left by earlier reviewers. through this 
+analytic process [13,48], we distilled seven attributes that 
+together account for the full range of mentoring processes 
+that we observed.
+","abundance: the sheer volume of review responses 
+contributes to the nature of distributed mentoring. by itself, 
+a shallow positive comment is relatively meaningless. but if 
+an author receives dozens or hundreds of such comments, the 
+mere presence of positive feedback in such quantities 
+provides important guidance to the writer. additionally, the 
+existence of multiple channels of feedback and mentoring, 
+such as private messaging, author’s notes, reviews, skype 
+chats, etc. contribute to the multiplicity and abundance of 
+distributed mentoring.
+",,,,,
+14,,,,"in the following sections, we report the dominant themes that 
+emerged from our analysis of the author interviews, followed 
+by a description of the seven attributes that we identified 
+through discussions and analytic memos following our 
+participant observations. all quotations included are 
+unmodified, 
+unless 
+obfuscation 
+was 
+necessary 
+for 
+anonymity, and as a result may contain typographical errors 
+that were present in their original form. in addition, portions 
+of the data have been anonymized to protect the identity of 
+the authors.
+","if i’ve got an idea, but need to spin it out a bit more, 
+i’ll just pop into one of my 30+ member skype chats 
+and toss it out there. i can always expect good 
+feedback there.
+- (author 22, my little pony)availability: on fanfiction.net and fimfiction.net, the 
+interactions of individual participants are visible to the larger 
+community. the persistent and public nature of online text-
+based communication ensures that reviews are available not 
+just immediately after a story is written, but indefinitely, 
+months or years into the future. this availability in turn 
+facilitates long-term exchanges and relationships between 
+reviewers and authors, as authors can post their stories and 
+learn from their reviewers (and reviewers can learn from 
+each other) years into the future, thus further broadening the 
+effect of distributed mentoring.
+",,,,,
+15,,,,,"asynchronicity: the public, durable text interactions allow 
+for asynchronous contributions by any person, at any time, 
+no matter the location, enabling reviewers from multiple 
+time zones around the globe to easily and continuously view 
+and reply to other reviews. authors might post a story, go to 
+sleep, and in the morning wake up to multiple thoughtful and 
+lengthy critiques of their work, which they or other reviewers 
+can then respond to as they wake up in their own time zones. 
+this asynchronicity adds depth, immediacy, and continuity 
+to a mentoring conversation. the power of asynchronous 
+communication, especially in international communities 
+operating in different time zones and outside work or school 
+hours, has been noted in previous research on online 
+community [5]. it is a crucial enabling factor for distributed 
+mentoring.
+",,,,,
+16,,,,,"affect: in interviews, on forums, and in their author’s notes, 
+fanfiction writers repeatedly mentioned positive affect or 
+emotion generated by the encouragement and inspiration 
+they received from reviews and feedback (see “the 
+importance of reviews” above). negative reviews or flames 
+were moderated by other reviewers creating a supportive 
+community response. it is important not to ignore the 
+emotional and supportive aspects of mentoring, especially 
+with respect to adolescents who are forming their identities and building self-efficacy. the act of writing, even nonfiction 
+writing, can be an emotionally charged event where otherwise 
+highly skilled individuals find themselves unable to produce the 
+written communication that is crucial for success in almost
+every field of endeavor. authors in these communities cited the
+emotional support they received as key to their growth as 
+writers.
+",,,,,
+17,,,,,"these attributes and tendencies themselves are interwoven, 
+as each contributes to and facilitates other attributes, further 
+contributing to the interdependent and complex nature of 
+distributed mentoring. for example, participants must be 
+able to view the responses of others (availability) so they can 
+take these diverse perspectives into consideration when 
+creating their own responses or reviews (accretion), and 
+respondents can directly contradict or support other 
+respondents (acceleration). as the fanfiction stories we 
+sampled increased in their number of reviews (aggregation),
+we saw an increase in the amount of discussion present in these 
+reviews, indicating that interactions in distributed mentoring 
+become more complex and richer with increasing numbers of 
+participants and responses.
+",,,,,
+18,,,,,"any phenomenon that draws millions of young people to 
+participate and generate literary content, especially in a 
+generation criticized for their inability to write coherently 
+[11,23,59,62], is deserving of closer attention. in particular, 
+understanding in more depth how networked publics facilitate 
+this new type of learning and mentoring is vital for the future 
+of formal and informal education as more and more young 
+people spend a significant fraction of their waking hours 
+online [23]. the seven attributes we identified form the 
+beginning of an understanding of the underlying structure of 
+this new kind of mentoring.",,,,,

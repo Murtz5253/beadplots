@@ -39,7 +39,7 @@ def make_csv(filename, section_dict, list_keywords, is_phrase=False):
 	long_form_data = data.melt(var_name='Section', value_name='Paragraph')
 	long_form_data_replaced = data_replaced.melt(var_name='Section', value_name='Paragraph')
 
-	if is_phrase: # different algorithm
+	if is_phrase: # different algorithm for phrases
 		classifier = pipeline("zero-shot-classification")
 		sequences = list(long_form_data['Paragraph']) # we will classify the word for each
 		candidate_label = list_keywords # if a phrase, this will just be the phrase as one string in the list
@@ -75,12 +75,13 @@ def generate_beadplot(data_csv, title, num_citations):
     # First generate base graph
 
     tick_count = len(set(data['algo_score_raw']))
+    tick_count = min(10, tick_count) # need to reduce the legend size for the manual ones
     base = alt.Chart(data, title=f"{title}, {num_citations} Citations").mark_circle(opacity=1, stroke='#4c78a8').encode(
         x=alt.X('Paragraph:N', axis=alt.Axis(labelAngle=0)),
         y=alt.Y('Section:N', sort=list(OrderedDict.fromkeys(data['Section']))),
-        size=alt.Size('algo_score_raw:Q', title="Number of Matches", legend=alt.Legend(tickCount=tick_count)), # ordinal variable type so legend not continuous
+        size=alt.Size('algo_score_raw:Q', title="Probability of Match", legend=alt.Legend(tickCount=tick_count)), # ordinal variable type so legend not continuous
     ).properties(
-        width=900,
+        width=1200,
         height=500
     )
     
@@ -90,7 +91,7 @@ def generate_beadplot(data_csv, title, num_citations):
         x=alt.X('Paragraph:N', axis=alt.Axis(labelAngle=0)),
         y=alt.Y('Section:N', sort=list(OrderedDict.fromkeys(data['Section'])))
     ).properties(
-        width=900,
+        width=1200,
         height=500
     )
     if max(data['algo_score_raw']) == 0:
@@ -149,44 +150,10 @@ def generate_driving(keyword):
 		f.close()
 
 	if " " in keyword: # checking if a phrase
-		list_keywords = list(aks.get_keyphrase_synonyms(keyword)) # ask user for phrases related to second command-line arg
+		filename = make_csv('driving', section_dict, [keyword], is_phrase=True)
 	else:
 		list_keywords = list(aks.get_keyword_synonyms(keyword)) # ask user for words related to second command-line arg
-
-	filename = make_csv('driving', section_dict, list_keywords)
-
-	chart = generate_beadplot(filename, "Explain Yourself! Transparency for Positive UX in Autonomous Driving", 3)
-	chart.show()
-
-def generate_driving(keyword):
-	path = './test_papers_text/driving'
-	section_dict = {'abstract': list(),
-					'introduction': list(),
-					'related_work': list(),
-					'experimental_setup': list(),
-					'results': list(),
-					'discussion': list(),
-					'results': list(),
-					'limitations': list(),
-					'summary': list(),
-					'conclusion': list()
-					}
-	for key in section_dict:
-		filepath = f"{path}/{key}.txt"
-		f = open(filepath, 'r', encoding="utf8")
-		for line in f.readlines():
-			if line == '\n':
-				continue
-			else:
-				section_dict[key].append(line)
-		f.close()
-
-	if " " in keyword: # checking if a phrase
-		list_keywords = list(aks.get_keyphrase_synonyms(keyword)) # ask user for phrases related to second command-line arg
-	else:
-		list_keywords = list(aks.get_keyword_synonyms(keyword)) # ask user for words related to second command-line arg
-
-	filename = make_csv('driving', section_dict, list_keywords)
+		filename = make_csv('driving', section_dict, list_keywords)
 
 	chart = generate_beadplot(filename, "Explain Yourself! Transparency for Positive UX in Autonomous Driving", 3)
 	chart.show()
@@ -211,15 +178,43 @@ def generate_ethnography(keyword):
 		f.close()
 
 	if " " in keyword: # checking if a phrase
-		list_keywords = list(aks.get_keyphrase_synonyms(keyword)) # ask user for phrases related to second command-line arg
+		filename = make_csv('ethnography', section_dict, [keyword], is_phrase=True)
 	else:
 		list_keywords = list(aks.get_keyword_synonyms(keyword)) # ask user for words related to second command-line arg
-
-	filename = make_csv('ethnography', section_dict, list_keywords)
+		filename = make_csv('ethnography', section_dict, list_keywords)
 
 	chart = generate_beadplot(filename, "Anticipatory Ethnography: Design Fiction as an Input to Design Ethnography", 64)
 	chart.show()
 
+def generate_women_hci(keyword):
+	path = './test_papers_text/women_hci'
+	section_dict = {'abstract': list(),
+					'introduction': list(),
+					'related_work': list(),
+					'background': list(),
+					'methodology': list(),
+					'findings': list(),
+					'discussion': list(),
+					'conclusion': list()
+					}
+	for key in section_dict:
+		filepath = f"{path}/{key}.txt"
+		f = open(filepath, 'r', encoding="utf8")
+		for line in f.readlines():
+			if line == '\n':
+				continue
+			else:
+				section_dict[key].append(line)
+		f.close()
+
+	if " " in keyword: # checking if a phrase
+		filename = make_csv('women_hci', section_dict, [keyword], is_phrase=True)
+	else:
+		list_keywords = list(aks.get_keyword_synonyms(keyword)) # ask user for words related to second command-line arg
+		filename = make_csv('women_hci', section_dict, list_keywords)
+
+	chart = generate_beadplot(filename, "The Unexpected Entry and Exodus of Women in Computing and HCI in India", 29)
+	chart.show()
 
 
 
