@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+          
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+          
+<!-- Create a div where the graph will take place -->
+<div id="chart"><div>
+
+<script>
+
+const toy_data = {
+  'abstract' : ['a'],
+  'introduction' : ['b', 'c'],
+  'methods' : ['d', 'e', 'f'],
+  'findings' : ['g', 'h', 'i', 'j'],
+  'conclusion' : ['k', 'l', 'm', 'n', 'o']
+  }
+  
+ const margin = {top:10,left:90,bottom:25,right:10},
+  width = 1000 - margin.top - margin.bottom,
+  height = 500 - margin.left - margin.right;
+  
+ const svg = d3.select('#chart')
+  .append('svg')
+  .attr('width', width + margin.left + margin.right)
+  .attr('height', height + margin.top + margin.bottom)
+  .append('g')
+  .attr('transform','translate(' + margin.left + ',' + margin.top + ')')
+ 
+ let rows = Object.getOwnPropertyNames(toy_data) 
+ let cols = [];
+ 
+
+ for(prop in toy_data) {
+  cols = cols.concat(toy_data[prop])
+ }
+ console.log(rows)
+ console.log(cols)
+ const x = d3.scaleBand()
+  .domain(cols)
+  .range([0,width])
+  
+ const y = d3.scaleBand()
+  .domain(rows)
+  .range([0,height])
+
+  const yAxis = d3.axisLeft(y)
+  
+ svg.append('g')
+  .call(yAxis)
+  .call(g => g.selectAll(".tick line").clone()
+          .attr("x2", width)
+          .attr("stroke-opacity", 1.0)
+          .attr("color", "steelblue"))
+ 
+ svg.append('g')
+  .attr('transform','translate(0,' + height + ')')
+  .call(d3.axisBottom(x))
+  
+for(prop in toy_data) {
+
+  svg.selectAll(null)
+    .data(toy_data[prop])
+    .enter()
+    .append('circle')
+    .attr('cx', d => x(d) + x.bandwidth()/2)
+    .attr('cy', y(prop) + y.bandwidth()/2)
+    .attr('r', x.bandwidth()/4)
+    .style('fill','steelblue')
+
+}
+
+</script>
+</html>
