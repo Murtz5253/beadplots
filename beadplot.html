@@ -1,76 +1,205 @@
 <!DOCTYPE html>
 <html>
-<meta charset="utf-8">
-          
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v7.min.js"></script>
-          
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
 <!-- Create a div where the graph will take place -->
-<div id="chart"><div>
 
+<body>
+  <main>
+    <div id="graph-container">
+      <div id="chart"></div>
+    </div>
+    <div id="paper-container">
+      <h1>
+        Paper Title
+      </h1>
+      <section id="abstract">
+        <h2>Abstract</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Facilisi morbi tempus iaculis urna id. Est ante in nibh mauris cursus mattis molestie. Urna id
+          volutpat lacus laoreet non. Viverra suspendisse potenti nullam ac tortor vitae purus. A condimentum vitae
+          sapien pellentesque. Sed enim ut sem viverra aliquet eget sit amet tellus. Elementum tempus egestas sed sed
+          risus pretium quam vulputate dignissim. Lorem ipsum dolor sit amet. Mauris vitae ultricies leo integer.
+          Pretium fusce id velit ut. Arcu ac tortor dignissim convallis aenean et. Lectus magna fringilla urna porttitor
+          rhoncus dolor purus non. Molestie a iaculis at erat pellentesque adipiscing commodo elit at.
+        </p>
+      </section>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Facilisi morbi tempus iaculis urna id. Est ante in nibh mauris cursus mattis molestie. Urna id
+          volutpat lacus laoreet non. Viverra suspendisse potenti nullam ac tortor vitae purus. A condimentum vitae
+          sapien pellentesque. Sed enim ut sem viverra aliquet eget sit amet tellus. Elementum tempus egestas sed sed
+          risus pretium quam vulputate dignissim. Lorem ipsum dolor sit amet. Mauris vitae ultricies leo integer.
+          Pretium fusce id velit ut. Arcu ac tortor dignissim convallis aenean et. Lectus magna fringilla urna porttitor
+          rhoncus dolor purus non. Molestie a iaculis at erat pellentesque adipiscing commodo elit at.
+
+          Auctor elit sed vulputate mi sit amet mauris. Massa vitae tortor condimentum lacinia quis vel eros donec. Sed
+          elementum tempus egestas sed sed risus pretium quam vulputate. Mauris augue neque gravida in fermentum et
+          sollicitudin ac. Id cursus metus aliquam eleifend mi in. Sapien nec sagittis aliquam malesuada. Morbi
+          tristique senectus et netus. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Ut tellus
+          elementum sagittis vitae et leo duis. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget.
+          Lectus sit amet est placerat in egestas erat. Viverra nam libero justo laoreet sit amet cursus sit.
+        </p>
+      </section>
+      <section id="methods">
+        <h2>Methods</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Facilisi morbi tempus iaculis urna id. Est ante in nibh mauris cursus mattis molestie. Urna id
+          volutpat lacus laoreet non. Viverra suspendisse potenti nullam ac tortor vitae purus. A condimentum vitae
+          sapien pellentesque. Sed enim ut sem viverra aliquet eget sit amet tellus. Elementum tempus egestas sed sed
+          risus pretium quam vulputate dignissim. Lorem ipsum dolor sit amet. Mauris vitae ultricies leo integer.
+          Pretium fusce id velit ut. Arcu ac tortor dignissim convallis aenean et. Lectus magna fringilla urna porttitor
+          rhoncus dolor purus non. Molestie a iaculis at erat pellentesque adipiscing commodo elit at.
+
+          Auctor elit sed vulputate mi sit amet mauris. Massa vitae tortor condimentum lacinia quis vel eros donec. Sed
+          elementum tempus egestas sed sed risus pretium quam vulputate. Mauris augue neque gravida in fermentum et
+          sollicitudin ac. Id cursus metus aliquam eleifend mi in. Sapien nec sagittis aliquam malesuada. Morbi
+          tristique senectus et netus. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Ut tellus
+          elementum sagittis vitae et leo duis. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget.
+          Lectus sit amet est placerat in egestas erat. Viverra nam libero justo laoreet sit amet cursus sit.
+
+          Dictum sit amet justo donec enim. At auctor urna nunc id cursus metus aliquam eleifend. Eget gravida cum
+          sociis natoque penatibus. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar
+          pellentesque. Orci a scelerisque purus semper. Lectus arcu bibendum at varius vel pharetra vel. Netus et
+          malesuada fames ac turpis egestas. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. Volutpat
+          consequat mauris nunc congue nisi vitae suscipit. Sit amet consectetur adipiscing elit. Risus in hendrerit
+          gravida rutrum quisque non tellus. Sit amet justo donec enim diam vulputate ut. Nisi lacus sed viverra tellus
+          in hac habitasse platea. Vitae suscipit tellus mauris a diam.
+
+          Vitae elementum curabitur vitae nunc sed velit dignissim. Dignissim enim sit amet venenatis urna cursus. Sed
+          enim ut sem viverra aliquet eget sit amet tellus. Massa placerat duis ultricies lacus sed turpis. Sed id
+          semper risus in hendrerit gravida. A diam sollicitudin tempor id eu nisl. Faucibus ornare suspendisse sed nisi
+          lacus sed viverra tellus. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Imperdiet proin
+          fermentum leo vel orci porta. Sed vulputate odio ut enim blandit volutpat maecenas volutpat. Aliquam eleifend
+          mi in nulla posuere. Ut sem viverra aliquet eget sit amet tellus cras. Scelerisque varius morbi enim nunc
+          faucibus a pellentesque. Eu augue ut lectus arcu bibendum. Enim blandit volutpat maecenas volutpat blandit
+          aliquam etiam erat. Integer enim neque volutpat ac tincidunt. Tincidunt augue interdum velit euismod in
+          pellentesque massa placerat. Aliquam id diam maecenas ultricies mi eget mauris. Id ornare arcu odio ut.
+
+          Euismod quis viverra nibh cras pulvinar mattis. Malesuada nunc vel risus commodo viverra maecenas accumsan.
+          Pretium fusce id velit ut tortor pretium viverra. Pharetra et ultrices neque ornare aenean euismod elementum
+          nisi. Laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget. Leo vel fringilla est
+          ullamcorper eget nulla facilisi. Turpis egestas sed tempus urna et pharetra. Blandit turpis cursus in hac
+          habitasse platea dictumst. Ornare arcu odio ut sem nulla pharetra diam. Quis risus sed vulputate odio.
+          Sagittis eu volutpat odio facilisis mauris sit amet massa vitae. Pulvinar pellentesque habitant morbi
+          tristique senectus. Condimentum mattis pellentesque id nibh tortor id aliquet lectus proin.
+        </p>
+      </section>
+      <section id="findings">
+        <h2>Findings</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Facilisi morbi tempus iaculis urna id. Est ante in nibh mauris cursus mattis molestie. Urna id
+          volutpat lacus laoreet non. Viverra suspendisse potenti nullam ac tortor vitae purus. A condimentum vitae
+          sapien pellentesque. Sed enim ut sem viverra aliquet eget sit amet tellus. Elementum tempus egestas sed sed
+          risus pretium quam vulputate dignissim. Lorem ipsum dolor sit amet. Mauris vitae ultricies leo integer.
+          Pretium fusce id velit ut. Arcu ac tortor dignissim convallis aenean et. Lectus magna fringilla urna porttitor
+          rhoncus dolor purus non. Molestie a iaculis at erat pellentesque adipiscing commodo elit at.
+
+          Auctor elit sed vulputate mi sit amet mauris. Massa vitae tortor condimentum lacinia quis vel eros donec. Sed
+          elementum tempus egestas sed sed risus pretium quam vulputate. Mauris augue neque gravida in fermentum et
+          sollicitudin ac. Id cursus metus aliquam eleifend mi in. Sapien nec sagittis aliquam malesuada. Morbi
+          tristique senectus et netus. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Ut tellus
+          elementum sagittis vitae et leo duis. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget.
+          Lectus sit amet est placerat in egestas erat. Viverra nam libero justo laoreet sit amet cursus sit.
+
+          Dictum sit amet justo donec enim. At auctor urna nunc id cursus metus aliquam eleifend. Eget gravida cum
+          sociis natoque penatibus. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar
+          pellentesque. Orci a scelerisque purus semper. Lectus arcu bibendum at varius vel pharetra vel. Netus et
+          malesuada fames ac turpis egestas. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. Volutpat
+          consequat mauris nunc congue nisi vitae suscipit. Sit amet consectetur adipiscing elit. Risus in hendrerit
+          gravida rutrum quisque non tellus. Sit amet justo donec enim diam vulputate ut. Nisi lacus sed viverra tellus
+          in hac habitasse platea. Vitae suscipit tellus mauris a diam.
+
+          Vitae elementum curabitur vitae nunc sed velit dignissim. Dignissim enim sit amet venenatis urna cursus. Sed
+          enim ut sem viverra aliquet eget sit amet tellus. Massa placerat duis ultricies lacus sed turpis. Sed id
+          semper risus in hendrerit gravida. A diam sollicitudin tempor id eu nisl. Faucibus ornare suspendisse sed nisi
+          lacus sed viverra tellus. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Imperdiet proin
+          fermentum leo vel orci porta. Sed vulputate odio ut enim blandit volutpat maecenas volutpat. Aliquam eleifend
+          mi in nulla posuere. Ut sem viverra aliquet eget sit amet tellus cras. Scelerisque varius morbi enim nunc
+          faucibus a pellentesque. Eu augue ut lectus arcu bibendum. Enim blandit volutpat maecenas volutpat blandit
+          aliquam etiam erat. Integer enim neque volutpat ac tincidunt. Tincidunt augue interdum velit euismod in
+          pellentesque massa placerat. Aliquam id diam maecenas ultricies mi eget mauris. Id ornare arcu odio ut.
+        </p>
+      </section>
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Integer vitae justo eget magna. Metus dictum at tempor commodo ullamcorper a lacus. Vel risus commodo viverra maecenas. Porttitor leo a diam sollicitudin tempor id. Donec pretium vulputate sapien nec sagittis. Sit amet porttitor eget dolor morbi non. Pretium viverra suspendisse potenti nullam ac tortor. Dui id ornare arcu odio ut sem nulla. Nisl pretium fusce id velit ut tortor pretium. Mattis pellentesque id nibh tortor id aliquet lectus proin. Mauris pharetra et ultrices neque ornare aenean euismod elementum nisi. Lobortis elementum nibh tellus molestie nunc non blandit massa. Bibendum arcu vitae elementum curabitur vitae. Pellentesque habitant morbi tristique senectus. Sed cras ornare arcu dui vivamus arcu felis bibendum ut. Dictum fusce ut placerat orci nulla pellentesque.
+
+Tincidunt nunc pulvinar sapien et ligula. Venenatis urna cursus eget nunc scelerisque viverra mauris. Malesuada proin libero nunc consequat interdum varius sit amet. Mauris vitae ultricies leo integer. Felis donec et odio pellentesque diam volutpat. Quis vel eros donec ac odio tempor orci. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Ac odio tempor orci dapibus ultrices in iaculis. Amet consectetur adipiscing elit duis. Vel eros donec ac odio tempor orci dapibus ultrices in.
+        </p>
+      </section>
+    </div>
+  </main>
+</body>
 <script>
-
-const toy_data = {
-  'abstract' : ['a'],
-  'introduction' : ['b', 'c'],
-  'methods' : ['d', 'e', 'f'],
-  'findings' : ['g', 'h', 'i', 'j'],
-  'conclusion' : ['k', 'l', 'm', 'n', 'o']
+  const toy_data = {
+    'abstract': ['a'],
+    'introduction': ['b', 'c'],
+    'methods': ['d', 'e', 'f'],
+    'findings': ['g', 'h', 'i', 'j'],
+    'conclusion': ['k', 'l', 'm', 'n', 'o']
   }
-  
- const margin = {top:10,left:90,bottom:25,right:10},
-  width = 1000 - margin.top - margin.bottom,
-  height = 500 - margin.left - margin.right;
-  
- const svg = d3.select('#chart')
-  .append('svg')
-  .attr('width', width + margin.left + margin.right)
-  .attr('height', height + margin.top + margin.bottom)
-  .append('g')
-  .attr('transform','translate(' + margin.left + ',' + margin.top + ')')
- 
- let rows = Object.getOwnPropertyNames(toy_data) 
- let cols = [];
- 
+  const margin = { top: 10, left: 90, bottom: 25, right: 10 },
+    width = 500 - margin.top - margin.bottom,
+    height = 500 - margin.left - margin.right;
+  const svg = d3.select('#chart')
+    .append('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .append('g')
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
+  let rows = Object.getOwnPropertyNames(toy_data)
+  let cols = [];
+  for (prop in toy_data) {
+    cols = cols.concat(toy_data[prop])
+  }
+  console.log(rows)
+  console.log(cols)
+  const x = d3.scaleBand()
+    .domain(cols)
+    .range([0, width])
 
- for(prop in toy_data) {
-  cols = cols.concat(toy_data[prop])
- }
- console.log(rows)
- console.log(cols)
- const x = d3.scaleBand()
-  .domain(cols)
-  .range([0,width])
-  
- const y = d3.scaleBand()
-  .domain(rows)
-  .range([0,height])
+  const y = d3.scaleBand()
+    .domain(rows)
+    .range([0, height])
 
   const yAxis = d3.axisLeft(y)
-  
- svg.append('g')
-  .call(yAxis)
-  .call(g => g.selectAll(".tick line").clone()
-          .attr("x2", width)
-          .attr("stroke-opacity", 1.0)
-          .attr("color", "steelblue"))
- 
- svg.append('g')
-  .attr('transform','translate(0,' + height + ')')
-  .call(d3.axisBottom(x))
-  
-for(prop in toy_data) {
 
-  svg.selectAll(null)
-    .data(toy_data[prop])
-    .enter()
-    .append('circle')
-    .attr('cx', d => x(d) + x.bandwidth()/2)
-    .attr('cy', y(prop) + y.bandwidth()/2)
-    .attr('r', x.bandwidth()/4)
-    .style('fill','steelblue')
+  svg.append('g')
+    .call(yAxis)
+    .call(g => g.selectAll(".tick line").clone()
+      .attr("x2", width)
+      .attr("stroke-opacity", 1.0)
+      .attr("color", "steelblue"))
 
-}
+  svg.append('g')
+    .attr('transform', 'translate(0,' + height + ')')
+    .call(d3.axisBottom(x))
 
+  for (let prop in toy_data) {
+    svg.selectAll(null)
+      .data(toy_data[prop])
+      .enter()
+      .append('circle')
+      .attr('cx', d => x(d) + x.bandwidth() / 2)
+      .attr('cy', y(prop) + y.bandwidth() / 2)
+      .attr('r', x.bandwidth() / 4)
+      .style('fill', 'steelblue')
+      .on('click', function () {
+        document.getElementById(prop).scrollIntoView();
+      })
+  }
 </script>
+
 </html>
