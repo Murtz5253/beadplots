@@ -1,0 +1,19 @@
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+#graph-container {
+  width: 60%;
+  height: 100%;
+}
+
+#paper-container {
+  width: 40%;
+  height: 100%;
+  overflow: scroll;
+  max-height: 100vh;
+}
