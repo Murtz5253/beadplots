@@ -1,0 +1,262 @@
+,Section,Paragraph,algo_score_raw
+0,abstract,0,3
+1,abstract,0,3
+2,abstract,0,3
+3,abstract,0,3
+4,abstract,0,3
+5,abstract,0,3
+6,abstract,0,3
+7,abstract,0,3
+8,abstract,0,3
+9,abstract,0,3
+10,abstract,0,3
+11,abstract,0,3
+12,abstract,0,3
+13,abstract,0,3
+14,abstract,0,3
+15,abstract,0,3
+16,abstract,0,3
+17,abstract,0,3
+18,abstract,0,3
+19,abstract,0,3
+20,abstract,0,3
+21,abstract,0,3
+22,abstract,0,3
+23,abstract,0,3
+24,abstract,0,3
+25,abstract,0,3
+26,abstract,0,3
+27,abstract,0,3
+28,abstract,0,3
+29,introduction,0,1
+30,introduction,1,0
+31,introduction,2,2
+32,introduction,0,1
+33,introduction,1,0
+34,introduction,2,2
+35,introduction,0,1
+36,introduction,1,0
+37,introduction,2,2
+38,introduction,0,1
+39,introduction,1,0
+40,introduction,2,2
+41,introduction,0,1
+42,introduction,1,0
+43,introduction,2,2
+44,introduction,0,1
+45,introduction,1,0
+46,introduction,2,2
+47,introduction,0,1
+48,introduction,1,0
+49,introduction,2,2
+50,introduction,0,1
+51,introduction,1,0
+52,introduction,2,2
+53,introduction,0,1
+54,introduction,1,0
+55,introduction,2,2
+56,introduction,0,1
+57,introduction,1,0
+58,previous work and background,0,0
+59,previous work and background,1,3
+60,previous work and background,2,2
+61,previous work and background,3,2
+62,previous work and background,4,1
+63,previous work and background,5,1
+64,previous work and background,6,2
+65,previous work and background,7,0
+66,previous work and background,8,1
+67,previous work and background,9,0
+68,previous work and background,0,0
+69,previous work and background,1,3
+70,previous work and background,2,2
+71,previous work and background,3,2
+72,previous work and background,4,1
+73,previous work and background,5,1
+74,previous work and background,6,2
+75,previous work and background,7,0
+76,previous work and background,8,1
+77,previous work and background,9,0
+78,previous work and background,0,0
+79,previous work and background,1,3
+80,previous work and background,2,2
+81,previous work and background,3,2
+82,previous work and background,4,1
+83,previous work and background,5,1
+84,previous work and background,6,2
+85,previous work and background,7,0
+86,previous work and background,8,1
+87,method,0,3
+88,method,1,1
+89,method,2,0
+90,method,3,1
+91,method,4,0
+92,method,5,0
+93,method,6,0
+94,method,7,0
+95,method,8,1
+96,method,9,0
+97,method,10,0
+98,method,11,0
+99,method,12,0
+100,method,13,0
+101,method,14,0
+102,method,0,3
+103,method,1,1
+104,method,2,0
+105,method,3,1
+106,method,4,0
+107,method,5,0
+108,method,6,0
+109,method,7,0
+110,method,8,1
+111,method,9,0
+112,method,10,0
+113,method,11,0
+114,method,12,0
+115,method,13,0
+116,findings,0,0
+117,findings,1,3
+118,findings,2,1
+119,findings,3,1
+120,findings,4,0
+121,findings,5,0
+122,findings,6,0
+123,findings,7,0
+124,findings,8,0
+125,findings,9,0
+126,findings,10,0
+127,findings,11,0
+128,findings,12,2
+129,findings,13,0
+130,findings,14,0
+131,findings,15,0
+132,findings,16,0
+133,findings,17,0
+134,findings,18,4
+135,findings,19,0
+136,findings,20,1
+137,findings,21,2
+138,findings,22,1
+139,findings,23,0
+140,findings,24,0
+141,findings,25,0
+142,findings,26,1
+143,findings,27,2
+144,findings,28,0
+145,limitation,0,0
+146,limitation,1,1
+147,limitation,2,1
+148,limitation,3,0
+149,limitation,0,0
+150,limitation,1,1
+151,limitation,2,1
+152,limitation,3,0
+153,limitation,0,0
+154,limitation,1,1
+155,limitation,2,1
+156,limitation,3,0
+157,limitation,0,0
+158,limitation,1,1
+159,limitation,2,1
+160,limitation,3,0
+161,limitation,0,0
+162,limitation,1,1
+163,limitation,2,1
+164,limitation,3,0
+165,limitation,0,0
+166,limitation,1,1
+167,limitation,2,1
+168,limitation,3,0
+169,limitation,0,0
+170,limitation,1,1
+171,limitation,2,1
+172,limitation,3,0
+173,limitation,0,0
+174,conclusion,0,3
+175,conclusion,0,3
+176,conclusion,0,3
+177,conclusion,0,3
+178,conclusion,0,3
+179,conclusion,0,3
+180,conclusion,0,3
+181,conclusion,0,3
+182,conclusion,0,3
+183,conclusion,0,3
+184,conclusion,0,3
+185,conclusion,0,3
+186,conclusion,0,3
+187,conclusion,0,3
+188,conclusion,0,3
+189,conclusion,0,3
+190,conclusion,0,3
+191,conclusion,0,3
+192,conclusion,0,3
+193,conclusion,0,3
+194,conclusion,0,3
+195,conclusion,0,3
+196,conclusion,0,3
+197,conclusion,0,3
+198,conclusion,0,3
+199,conclusion,0,3
+200,conclusion,0,3
+201,conclusion,0,3
+202,conclusion,0,3
+203,acknowledgments,0,0
+204,acknowledgments,0,0
+205,acknowledgments,0,0
+206,acknowledgments,0,0
+207,acknowledgments,0,0
+208,acknowledgments,0,0
+209,acknowledgments,0,0
+210,acknowledgments,0,0
+211,acknowledgments,0,0
+212,acknowledgments,0,0
+213,acknowledgments,0,0
+214,acknowledgments,0,0
+215,acknowledgments,0,0
+216,acknowledgments,0,0
+217,acknowledgments,0,0
+218,acknowledgments,0,0
+219,acknowledgments,0,0
+220,acknowledgments,0,0
+221,acknowledgments,0,0
+222,acknowledgments,0,0
+223,acknowledgments,0,0
+224,acknowledgments,0,0
+225,acknowledgments,0,0
+226,acknowledgments,0,0
+227,acknowledgments,0,0
+228,acknowledgments,0,0
+229,acknowledgments,0,0
+230,acknowledgments,0,0
+231,acknowledgments,0,0
+232,references,0,13
+233,references,1,6
+234,references,2,0
+235,references,0,13
+236,references,1,6
+237,references,2,0
+238,references,0,13
+239,references,1,6
+240,references,2,0
+241,references,0,13
+242,references,1,6
+243,references,2,0
+244,references,0,13
+245,references,1,6
+246,references,2,0
+247,references,0,13
+248,references,1,6
+249,references,2,0
+250,references,0,13
+251,references,1,6
+252,references,2,0
+253,references,0,13
+254,references,1,6
+255,references,2,0
+256,references,0,13
+257,references,1,6
+258,references,2,0
+259,references,0,13
+260,references,1,6

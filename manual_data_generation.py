@@ -69,35 +69,56 @@ def make_csv(filename, section_dict, list_keywords, is_phrase=False):
 	return filename
 
 def generate_beadplot(data_csv, title, num_citations):
-    data = pd.read_csv(data_csv)
-    # data['algo_score_raw'] = data['algo_score_raw'].replace({0: -1})
-    # display(data)
-    # First generate base graph
+	data = pd.read_csv(data_csv)
+	# data['algo_score_raw'] = data['algo_score_raw'].replace({0: -1})
+	# display(data)
+	# First generate base graph
 
-    tick_count = len(set(data['algo_score_raw']))
-    tick_count = min(10, tick_count) # need to reduce the legend size for the manual ones
-    base = alt.Chart(data, title=f"{title}, {num_citations} Citations").mark_circle(opacity=1, stroke='#4c78a8').encode(
-        x=alt.X('Paragraph:N', axis=alt.Axis(labelAngle=0)),
-        y=alt.Y('Section:N', sort=list(OrderedDict.fromkeys(data['Section']))),
-        size=alt.Size('algo_score_raw:Q', title="Number of Matches", legend=alt.Legend(tickCount=tick_count - 1)), # ordinal variable type so legend not continuous
-    ).properties(
-        width=1200,
-        height=500
-    )
-    
-    # Next generate the overlying graph with the lines
-    
-    lines = alt.Chart(data).mark_rule(stroke='#4c78a8').encode(
-        x=alt.X('Paragraph:N', axis=alt.Axis(labelAngle=0)),
-        y=alt.Y('Section:N', sort=list(OrderedDict.fromkeys(data['Section'])))
-    ).properties(
-        width=1200,
-        height=500
-    )
-    if max(data['algo_score_raw']) == 0:
-        return lines # no beads if no matches
-    else:
-        return base + lines
+	tick_count = len(set(data['algo_score_raw']))
+	tick_count = min(10, tick_count) # need to reduce the legend size for the manual ones
+	tick_count = 7 # temporary manual one to make differences easier to see
+	base = alt.Chart(data).mark_circle(opacity=1, stroke='#4c78a8').encode(
+		x=alt.X('Paragraph:N', axis=alt.Axis(labelAngle=0, labelFontSize=21)),
+		y=alt.Y('Section:N', axis=alt.Axis(labelFontSize=23), sort=list(OrderedDict.fromkeys(data['Section']))),
+		size=alt.Size('algo_score_raw:Q', scale=alt.Scale(range=[0, 1800]), title="Probability of Match", legend=alt.Legend(tickCount=tick_count)), # ordinal variable type so legend not continuous
+	).properties(
+		title = alt.TitleParams(
+			[f"{title}, {num_citations} Citations"],
+			fontSize=30,
+			offset=10
+		),
+		width=1200,
+		height=500
+	)
+	
+	# Next generate the overlying graph with the lines
+	
+	lines = alt.Chart(data).mark_rule(stroke='#4c78a8').encode(
+		x=alt.X('Paragraph:N', axis=alt.Axis(labelAngle=0)),
+		y=alt.Y('Section:N', sort=list(OrderedDict.fromkeys(data['Section'])))
+	).properties(
+		width=1200,
+		height=500
+	)
+	if max(data['algo_score_raw']) == 0:
+		final_chart = lines # no beads if no matches
+		final_chart = final_chart.configure_legend(
+			titleFontSize=17,
+			labelFontSize=17
+		).configure_axis(
+			labelFontSize=18,
+			titleFontSize=25
+		)
+		return final_chart
+	else:
+		final_chart = base + lines
+		final_chart = final_chart.configure_legend(
+			titleFontSize=18,
+			labelFontSize=18
+		).configure_axis(
+			titleFontSize=25
+		)
+		return final_chart
 
 def generate_bitcoin(keyword):
 	path = './test_papers_text/bitcoin'
@@ -124,7 +145,6 @@ def generate_bitcoin(keyword):
 		filename = make_csv('bitcoin', section_dict, list_keywords)
 
 	chart = generate_beadplot(filename, "Exploring Trust in Bitcoin Technology: A Framework for HCI Research", 69)
-	chart.show()
 
 def generate_driving(keyword):
 	path = './test_papers_text/driving'
@@ -156,15 +176,16 @@ def generate_driving(keyword):
 		filename = make_csv('driving', section_dict, list_keywords)
 
 	chart = generate_beadplot(filename, "Explain Yourself! Transparency for Positive UX in Autonomous Driving", 3)
+	#chart.save("./driving.png")
 	chart.show()
 
 def generate_ethnography(keyword):
 	path = './test_papers_text/ethnography'
 	section_dict = {'abstract': list(),
 					'introduction': list(),
-					'terms_of_reference': list(),
-					'joining_the_dots': list(),
-					'coloring_between_the_dots': list(),
+					'ref_terms': list(),
+					'joining_dots': list(),
+					'coloring_dots': list(),
 					'conclusion': list()
 					}
 	for key in section_dict:
