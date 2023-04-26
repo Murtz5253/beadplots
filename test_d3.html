@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v6.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<script>
+
+// set the dimensions and margins of the graph
+const margin = {top: 10, right: 20, bottom: 30, left: 50},
+    width = 800 - margin.left - margin.right,
+    height = 420 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+const svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+//Read the data
+d3.csv("https://raw.githubusercontent.com/Murtz5253/beadplots/main/output/distributed_mento-education-training-learning-teaching.csv").then( function(data) {
+
+  // Add X axis
+  const x = d3.scaleLinear()
+    .domain([0, 28])
+    .range([20, width ]);
+  svg.append("g")
+    .attr("transform", `translate(0, ${height})`)
+    .call(d3.axisBottom(x));
+
+  // Add Y axis
+  const y = d3.scalePoint()
+    .domain(['abstract', 'introduction', 'previous work and background', 'method',
+    	      'findings', 'limitation', 'conclusion', 'acknowledgments', 'references'])
+    .range([0, height]);
+
+  y.padding(.75);
+
+   console.log(y('abstract'))
+
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+  // Add a scale for bubble size
+  const z = d3.scaleLinear()
+    .domain([0, 12])
+    .range([1, 15]);
+
+  // Add dots
+  svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .join("circle")
+      .attr("cx", d => x(d.Paragraph))
+      .attr("cy", d => y(d.Section))
+      .attr("r", d => z(d.algo_score_raw))
+      .style("fill", "#4c78a8")
+      .style("opacity", "0.7")
+      .attr("stroke", "black")
+
+})
+
+</script>
