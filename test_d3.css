@@ -1,0 +1,11 @@
+svg {
+  display: block;
+  margin: auto;
+}
+
+
+.selected {
+  opacity: 1 !important;
+  stroke: black;
+  stroke-width: 1px;
+}

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<head>
+  <link rel="stylesheet" href="test_d3.css">
+</head>
 
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v6.js"></script>
@@ -10,9 +13,11 @@
 <script>
 
 // set the dimensions and margins of the graph
-const margin = {top: 10, right: 20, bottom: 30, left: 50},
+const margin = {top: 10, right: 20, bottom: 30, left: 150},
     width = 800 - margin.left - margin.right,
-    height = 420 - margin.top - margin.bottom;
+    height = 420 - margin.top - margin.bottom,
+    inner_width = width - margin.left - margin.right,
+    inner_height = height - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 const svg = d3.select("#my_dataviz")
@@ -24,6 +29,33 @@ const svg = d3.select("#my_dataviz")
 
 //Read the data
 d3.csv("https://raw.githubusercontent.com/Murtz5253/beadplots/main/output/distributed_mento-education-training-learning-teaching.csv").then( function(data) {
+
+  // List of groups (here I have one group per column)
+  var allGroup = ['abstract', 'introduction', 'previous work and background', 'method',
+            'findings', 'limitation', 'conclusion', 'acknowledgments', 'references']
+
+  // Reformat the data: we need an array of arrays of {x, y} tuples
+  var dataReady = allGroup.map( function(grpName) { // .map allows to do something for each element of the list
+    return {
+      name: grpName,
+      // Because of the way data is formatted, need to filter on
+      // the section column first, otherwise D3 will try to connect
+      // lines across rows.
+      values: data.filter(function(d)
+          {return d.Section==grpName} 
+        ).map(function(d) {
+          return {paragraph: d.Paragraph, section: d.Section, algo_score_raw: d.algo_score_raw};
+        })
+    };
+  });
+
+  console.log(dataReady)
+
+  var uniqueArray = dataReady.filter(function(elem, pos) {
+    return dataReady.indexOf(elem) == pos;
+  });
+  console.log(uniqueArray)
+
 
   // Add X axis
   const x = d3.scaleLinear()
@@ -41,27 +73,101 @@ d3.csv("https://raw.githubusercontent.com/Murtz5253/beadplots/main/output/distri
 
   y.padding(.75);
 
-   console.log(y('abstract'))
+  // Add a scale for bubble size
+  const z = d3.scaleLinear()
+    .domain([0, 12])
+    .range([0, 15]);
 
   svg.append("g")
     .call(d3.axisLeft(y));
 
-  // Add a scale for bubble size
-  const z = d3.scaleLinear()
-    .domain([0, 12])
-    .range([1, 15]);
+  // A color scale: one color for each group
+  var myColor = d3.scaleOrdinal()
+    .domain(allGroup)
+    .range(d3.schemeSet2);
 
-  // Add dots
-  svg.append('g')
-    .selectAll("dot")
-    .data(data)
-    .join("circle")
-      .attr("cx", d => x(d.Paragraph))
-      .attr("cy", d => y(d.Section))
-      .attr("r", d => z(d.algo_score_raw))
-      .style("fill", "#4c78a8")
-      .style("opacity", "0.7")
-      .attr("stroke", "black")
+  // Add the lines
+    var line = d3.line()
+      // d.paragraph and d.section are lowercase because they need to match the new  reformatted dataReady key names
+      .x(function(d) { return x(+d.paragraph) })
+      .y(function(d) { return y(d.section) })
+    svg.selectAll("myLines")
+      .data(dataReady)
+      .enter()
+      .append("path")
+        .attr("d", function(d){ return line(d.values) } )
+        .attr("stroke", function(d){ return '#4c78a8' })
+        .style("stroke-width", 2)
+        .style("fill", "none")
+
+    // Add the points
+    var myDots = svg
+      // First we need to enter in a group
+      .selectAll("myDots")
+      .data(dataReady)
+      .enter()
+        .append('g')
+      // Second we need to enter in the 'values' part of this group
+      .selectAll("myPoints")
+      .data(function(d){ return d.values })
+      .enter()
+      .append("circle")
+      // d.paragraph and d.section are lowercase because they need to match the new  reformatted dataReady key names
+        .attr("cx", function(d) { return x(d.paragraph) } )
+        .attr("cy", function(d) { return y(d.section) } )
+        .attr("r", d => z(d.algo_score_raw))
+        .attr("fill", "#4c78a8")
+
+    // Add brushing
+    svg
+      .call( d3.brush()             // Add the brush feature using the d3.brush function
+        .extent( [ [0,0], [width,height] ] ) // initialise the brush area: start at 0,0 and finishes at width,height: it means I select the whole graph area
+        .on("start brush", updateChart) // Each time the brush selection changes, trigger the 'updateChart' function
+      )
+
+    // Function that is triggered when brushing is performed
+    function updateChart(event) {
+      extent = event.selection
+      myDots.classed("selected", function(d){ return isBrushed(extent, x(d.paragraph), y(d.section) ) } )
+    }
+
+    // A function that return TRUE or FALSE according if a dot is in the selection or not
+    function isBrushed(brush_coords, cx, cy) {
+         var x0 = brush_coords[0][0],
+             x1 = brush_coords[1][0],
+             y0 = brush_coords[0][1],
+             y1 = brush_coords[1][1];
+        return x0 <= cx && cx <= x1 && y0 <= cy && cy <= y1;    // This return TRUE or FALSE depending on if the points is in the selected area
+    }
+
+  //   // Add the lines
+  // var line = d3.line()
+  //   .x(function(d) { return x(+d.Section) })
+  //   .y(function(d) { return y(+d.Paragraph) })
+  // svg.selectAll("myLines")
+  //   .data(data)
+  //   .enter()
+  //   .append("path")
+  //     .attr("d", function(d){ return line(d.Section) } )
+  //     .style("stroke-width", 4)
+  //     .style("fill", "none")
+
+  // // Add a scale for bubble size
+  // const z = d3.scaleLinear()
+  //   .domain([0, 12])
+  //   .range([1, 15]);
+
+  // // Add dots
+  // svg.append('g')
+  //   .selectAll("dot")
+  //   .data(data)
+  //   .join("circle")
+  //     .attr("cx", d => x(d.Paragraph))
+  //     .attr("cy", d => y(d.Section))
+  //     .attr("r", d => z(d.algo_score_raw))
+  //     .style("fill", "#4c78a8")
+  //     .style("opacity", "0.7")
+  //     .attr("stroke", "black")
 
 })
 
