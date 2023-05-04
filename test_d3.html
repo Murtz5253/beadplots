@@ -10,6 +10,44 @@
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
 
+<body>
+  <main>
+    <div id="paper-container">
+      <h1>
+        Paper Title
+      </h1>
+      <section id="abstract">
+        <h2>Abstract</h2>
+        <p id="abstract0">
+          In India, women represent 45% of total computer science enrollment in universities, almost three times the rate in the United States, where it is 18%. At the same time, women make up an estimated 25-30% of the HCI community in India, half the rate in the U.S. We investigate the complexities of these surprising phenomena through qualitative research of Indian computer science and human-computer interaction researchers and professionals at various life stages. We find among other things that Indian familial norms play a significant role in pressuring young women into computing as a field; that familial pressures and workplace discrimination then cause a precipitous exit of women from computing at the onset of marriage; and that HCI occupies an interstitial space between art and technology that affects women’s careers. Our findings underscore the societal influence on women’s representation in the tech sector and invite further participation by the HCI community in related questions.
+        </p>
+      </section>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p id="introduction0">
+          For about a decade now, there has been public scrutiny of gender inequality in the technology industry, and for valid reasons. Some milestones in this conversation include a 2007 UC Davis report noting that only 7.3% of Silicon Valley boards members were women [36]; Facebook COO Sheryl Sandberg’s bright spotlight on tech-and-gender issues through public talks and a best-selling book in 2010 [56]; and Google’s 2014 disclosure of the demographic make-up of its employees [6].
+        </p>
+
+        <p id="introduction1">
+          The aspiration is for proportional representation, but ground reality has yet to catch up. As even critics of Silicon Valley’s gender inequality acknowledge, much of the gender parity challenge lies with the so-called “pipeline” that feeds into employment [26]. Women make up only 18% of computer science (CS) majors at U.S. universities, and frustratingly, this is down from a peak of about 37% in 1984 [31]. The situation is similar in other countries that are above the global average of Global Gender Gap index (referred to as genderequal countries henceforth, though inequalities persist; we mean this only relative to highly gender-unequal nations)1— e.g., UK at 18% and Sweden at 22% of workforce [17]. 
+        </p>
+
+        <p id="introduction2">
+          In contrast, human-computer interaction (HCI) is one of the few computing fields to have achieved gender parity in genderequal countries [19]. A number of factors lead to the higher representation of women in HCI, including linking work to societal impact, creativity, and inter disciplinarity [43, 42].
+        </p>
+
+        <p id="introduction3">
+          In this paper, we report from qualitative research of Indian women scientists and practitioners in CS and HCI at various stages in their careers. How is it that in a larger social context of gender inequality, India manages to outperform more gender-equal countries with respect to computing enrollment? How long does the strong pipeline continue? And, why is the female representation poorer in HCI, when the numbers are higher in CS? Through our research, we find that socio-cultural pressures encourage, even coerce, women into entry-level programs in computing due to the lucrative and stable prospects of the IT sector. However, a drastic shift accompanies marriage and childcare expectations, with careers brought to a halt for many Indian women. In contrast to CS, HCI is viewed as an arts field, hence considered less desirable, and compounded by discrimination issues in fieldwork and practice.
+        </p>
+
+        <p id="introduction4">
+          The novel contributions in this paper are as follows: First, we explore how women in the Indian computing sector experience gender-related issues across their lifetime, from undergraduates to researchers, and identify how gender discrimination and representation evolve through life stages. Against a backdrop of significant literature in gender-equal contexts, we highlight a range of culture-dependent differences. Second, we find a number of substantial differences in perceptions—by women and by Indian society as a whole—of HCI compared with computer science. To our knowledge, these have never been investigated formally anywhere in the world. Finally, we argue that it is imperative that HCI researchers participate more vigorously in understanding the human-system interface that excludes so many women. To this end, we provide some suggestions for the design, policy, and education around women’s participation in computing and HCI.
+        </p>
+      </section>
+    </div>
+  </main>
+</body>
+
 <script>
 
 // set the dimensions and margins of the graph
@@ -28,11 +66,14 @@ const svg = d3.select("#my_dataviz")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 //Read the data
-d3.csv("https://raw.githubusercontent.com/Murtz5253/beadplots/main/output/distributed_mento-education-training-learning-teaching.csv").then( function(data) {
+d3.csv("https://raw.githubusercontent.com/Murtz5253/beadplots/main/output/women_computing_india-marriage-matrimony-married_couple-marriage_ceremony-wedlock-wedding-man_and_wife-spousal_relationship-marriage-union.csv").then( function(data) {
 
   // List of groups (here I have one group per column)
-  var allGroup = ['abstract', 'introduction', 'previous work and background', 'method',
-            'findings', 'limitation', 'conclusion', 'acknowledgments', 'references']
+  var allGroup = ['abstract', 'introduction', 'related work', 'background',
+          'method', 'findings', 'discussion', 'conclusion']
+
+  // ['abstract', 'introduction', 'related work', 'background',
+  //        'method', 'findings', 'discussion', 'conclusion']
 
   // Reformat the data: we need an array of arrays of {x, y} tuples
   var dataReady = allGroup.map( function(grpName) { // .map allows to do something for each element of the list
@@ -59,16 +100,16 @@ d3.csv("https://raw.githubusercontent.com/Murtz5253/beadplots/main/output/distri
 
   // Add X axis
   const x = d3.scaleLinear()
-    .domain([0, 28])
+    .domain([0, 57])
     .range([20, width ]);
   svg.append("g")
     .attr("transform", `translate(0, ${height})`)
-    .call(d3.axisBottom(x));
+    .call(d3.axisBottom(x).ticks(30));
 
   // Add Y axis
   const y = d3.scalePoint()
-    .domain(['abstract', 'introduction', 'previous work and background', 'method',
-    	      'findings', 'limitation', 'conclusion', 'acknowledgments', 'references'])
+    .domain(['abstract', 'introduction', 'related work', 'background',
+             'method', 'findings', 'discussion', 'conclusion'])
     .range([0, height]);
 
   y.padding(.75);
@@ -108,7 +149,7 @@ d3.csv("https://raw.githubusercontent.com/Murtz5253/beadplots/main/output/distri
       .enter()
         .append('g')
       // Second we need to enter in the 'values' part of this group
-      .selectAll("myPoints")
+      .selectAll("p")
       .data(function(d){ return d.values })
       .enter()
       .append("circle")
@@ -117,57 +158,35 @@ d3.csv("https://raw.githubusercontent.com/Murtz5253/beadplots/main/output/distri
         .attr("cy", function(d) { return y(d.section) } )
         .attr("r", d => z(d.algo_score_raw))
         .attr("fill", "#4c78a8")
+        .on("mouseover", hovered)
+        .on("click", clicked)
+        .on("mouseout", unhovered)
 
-    // Add brushing
-    svg
-      .call( d3.brush()             // Add the brush feature using the d3.brush function
-        .extent( [ [0,0], [width,height] ] ) // initialise the brush area: start at 0,0 and finishes at width,height: it means I select the whole graph area
-        .on("start brush", updateChart) // Each time the brush selection changes, trigger the 'updateChart' function
-      )
+      function hovered(event, d) {
 
-    // Function that is triggered when brushing is performed
-    function updateChart(event) {
-      extent = event.selection
-      myDots.classed("selected", function(d){ return isBrushed(extent, x(d.paragraph), y(d.section) ) } )
-    }
+        d3.select(this).transition()
+            .attr("r", d => z(d.algo_score_raw) * 2); // double the size of the point
 
-    // A function that return TRUE or FALSE according if a dot is in the selection or not
-    function isBrushed(brush_coords, cx, cy) {
-         var x0 = brush_coords[0][0],
-             x1 = brush_coords[1][0],
-             y0 = brush_coords[0][1],
-             y1 = brush_coords[1][1];
-        return x0 <= cx && cx <= x1 && y0 <= cy && cy <= y1;    // This return TRUE or FALSE depending on if the points is in the selected area
-    }
+        console.log(d3.select(this).data())
+      }
 
-  //   // Add the lines
-  // var line = d3.line()
-  //   .x(function(d) { return x(+d.Section) })
-  //   .y(function(d) { return y(+d.Paragraph) })
-  // svg.selectAll("myLines")
-  //   .data(data)
-  //   .enter()
-  //   .append("path")
-  //     .attr("d", function(d){ return line(d.Section) } )
-  //     .style("stroke-width", 4)
-  //     .style("fill", "none")
+      function unhovered(event, d) {
 
-  // // Add a scale for bubble size
-  // const z = d3.scaleLinear()
-  //   .domain([0, 12])
-  //   .range([1, 15]);
+        d3.select(this).transition()
+            .attr("r", d => z(d.algo_score_raw)) // back to original size
+            .attr("fill", "#4c78a8"); // back to original color in case it had been clicked
+      }
 
-  // // Add dots
-  // svg.append('g')
-  //   .selectAll("dot")
-  //   .data(data)
-  //   .join("circle")
-  //     .attr("cx", d => x(d.Paragraph))
-  //     .attr("cy", d => y(d.Section))
-  //     .attr("r", d => z(d.algo_score_raw))
-  //     .style("fill", "#4c78a8")
-  //     .style("opacity", "0.7")
-  //     .attr("stroke", "black")
+      function clicked(event, d) {
+
+        d3.select(this).transition()
+            .attr("fill", "black")
+            .attr("r", radius * 2)
+          .transition()
+            .attr("r", radius)
+            .attr("fill", d3.schemeCategory10[d.index % 10]);
+      }
+
 
 })
 
