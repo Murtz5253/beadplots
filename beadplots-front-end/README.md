@@ -1,2 +1,0 @@
-# Beadplots Front End
-
