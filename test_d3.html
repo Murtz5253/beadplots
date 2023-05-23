@@ -7,6 +7,9 @@
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v6.js"></script>
 
+<!-- Load legend support -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
 
@@ -14,7 +17,7 @@
   <main>
     <div id="paper-container">
       <h1>
-        Paper Title
+        The Unexpected Entry and Exodus of Women in Computing and HCI in India
       </h1>
       <section id="abstract">
         <h2>Abstract</h2>
@@ -381,7 +384,7 @@ const margin = {top: 10, right: 20, bottom: 30, left: 150},
 const svg = d3.select("#my_dataviz")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("height", height + margin.top + margin.bottom + 40)
   .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
@@ -439,6 +442,10 @@ d3.csv("https://raw.githubusercontent.com/Murtz5253/beadplots/main/output/women_
     .domain([0, 12])
     .range([0, 15]);
 
+  // Add associated legend
+  var legend = d3.legendSize().scale(z).labelFormat(d3.format(".0f")).shape("circle").title("Number of Matches")
+  svg.append("g").attr("transform", "translate(500, 75)").call(legend)
+
   svg.append("g")
     .call(d3.axisLeft(y));
 
@@ -481,6 +488,30 @@ d3.csv("https://raw.githubusercontent.com/Murtz5253/beadplots/main/output/women_
         .on("mouseover", hovered)
         .on("click", clicked)
         .on("mouseout", unhovered)
+
+    // Add title
+    svg.append("text")
+     .attr("x", width/2)
+     .attr("y", 5 - (margin.top / 2))
+     .attr("text-anchor", "middle")
+     .style("font-size", "16px")
+     .text("The Unexpected Entry and Exodus of Women in Computing and HCI in India, 29 Citations");
+
+    // Add axis labels
+    svg.append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", width / 2)
+      .attr("y", height + 40)
+      .text("Paragraph");
+
+    svg.append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("x", -175)
+      .attr("y", -70)
+      .attr("transform", "rotate(-90)")
+      .text("Section");
 
       function hovered(event, d) {
 
